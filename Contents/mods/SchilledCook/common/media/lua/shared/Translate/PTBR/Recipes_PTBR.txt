@@ -1,0 +1,4 @@
+Recipes_PTBR = {
+    Recipe_RefillGlueBottle = "Encher tubos de cola",
+    Recipe_CreateHomeMadeGlue = "Criar cola caseira",
+}

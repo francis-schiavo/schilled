@@ -1,0 +1,14 @@
+Recipes_EN = {
+    Recipe_CraftSpareEngineParts = "Craft spare engine parts",
+    Recipe_RecycleVehicleSeat = "Recycle vehicle seat",
+    Recipe_RecycleBattery = "Recycle battery",
+    Recipe_RecycleSuspension = "Recycle suspension",
+    Recipe_RecycleBrake = "Recycle brake",
+    Recipe_RecycleMuffler = "Recycle muffler",
+    Recipe_RecycleGasTank = "Recycle gas tank",
+    Recipe_RecycleDoor = "Recycle door",
+    Recipe_RecycleHood = "Recycle hood",
+    Recipe_RecycleTrunk = "Recycle trunk",
+    RecycleTrailerTrunk = "Recycle trailer trunk",
+    Recipe_RecycleTrunkDoor = "Recycle trunk door",
+}

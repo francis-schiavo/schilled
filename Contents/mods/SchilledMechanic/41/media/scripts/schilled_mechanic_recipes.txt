@@ -1,0 +1,18 @@
+module SchilledMechanic {
+  import {
+    Base
+  }
+
+  recipe Craft spare engine parts
+  {
+    ScrapMetal=15,
+    ElectronicsScrap=5,
+
+    Result:EngineParts=5,
+    Time:30.0,
+    Category:Mechanic,
+    OnGiveXP:Recipe.OnGiveXP.None,
+    Sound:GeneratorRepair,
+    SkillRequired: Mechanics=10,
+  }
+}

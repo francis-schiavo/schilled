@@ -1,0 +1,24 @@
+module SchilledMechanic {
+  import {
+    Base
+  }
+
+  craftRecipe CraftSpareEngineParts
+  {
+    timedAction = CutWire,
+    Time = 30,
+    tags = InHandCraft,
+    SkillRequired = Mechanics:10,
+    category = Mechanic,
+    xpAward = Mechanic:12,
+    inputs
+    {
+      item 15 [Base.ScrapMetal],
+      item 5 [Base.ElectronicsScrap],
+    }
+    outputs
+    {
+      item 5 Base.EngineParts,
+    }
+  }
+}

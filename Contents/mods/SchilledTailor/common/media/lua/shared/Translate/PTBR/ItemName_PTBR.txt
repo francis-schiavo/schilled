@@ -1,0 +1,7 @@
+ItemName_PTBR = {
+  ItemName_SchilledTailor.ReinforcedALICEpack = "Mochila Grande Reforçada",
+  ItemName_SchilledTailor.ReinforcedALICEpack_Army = "Mochila Militar Reforçada",
+  ItemName_SchilledTailor.ReinforcedALICEpack_DesertCamo = "Mochila Militar do deserto reforçada",
+  ItemName_SchilledTailor.ReinforcedSewingKit = "Kit de costura reforçado",
+  ItemName_SchilledTailor.ReinforcedFirstAidKit = "Kit de primeiros socorros reforçado",
+}

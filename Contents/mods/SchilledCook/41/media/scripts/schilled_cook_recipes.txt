@@ -1,0 +1,207 @@
+module SchilledCook {
+  import {
+    Base
+  }
+
+  recipe Make improvised lids
+  {
+     GroceryBag1/GroceryBag2/GroceryBag3/GroceryBag4/GroceryBag5/Plasticbag,
+     RubberBand/Twine/Thread,
+     keep [Recipe.GetItemTypes.Scissors],
+
+     Result:ImprovisedLid=8,
+     Time:100.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:ClothesRipping,
+     SkillRequired: MetalWelding=5,
+  }
+
+  recipe Make improvised cans
+  {
+    MetalPipe,
+    keep [Recipe.GetItemTypes.Saw],
+
+    Result:TinCanEmpty=10,
+    CanBeDoneFromFloor:true,
+    Sound:Sawing,
+    Time:230.0,
+    Category:General,
+    AnimNode:SawLog,
+    Prop1:Source=2,
+    Prop2:MetalPipe,
+    SkillRequired: MetalWelding=5,
+  }
+
+  recipe Create Canned Tomatoes
+  {
+     Tomato=2,
+     ImprovisedLid=1,
+     TinCanEmpty=1,
+
+     Result:CannedTomatoHomeMade,
+     Time:80.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:OpenCannedFood,
+     SkillRequired: Cooking=8,
+  }
+
+  recipe Open Canned Tomato
+  {
+     CannedTomatoHomeMade,
+
+     OnCreate:Recipe.OnCreate.OpenCannedFoodHomeMade,
+     Result:CannedTomatoOpen,
+     Time:80.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:OpenCannedFood,
+  }
+
+  recipe Create Canned Potatoes
+  {
+     Potato=2,
+     ImprovisedLid=1,
+     TinCanEmpty=1,
+
+     Result:CannedPotatoHomeMade,
+     Time:80.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:OpenCannedFood,
+     SkillRequired: Cooking=8,
+  }
+
+  recipe Open Canned Potato
+  {
+     CannedPotatoHomeMade,
+
+     OnCreate:Recipe.OnCreate.OpenCannedFoodHomeMade,
+     Result:CannedPotatoOpen,
+     Time:80.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:OpenCannedFood,
+  }
+
+  recipe Create Canned Carrots
+  {
+     Carrots=2,
+     ImprovisedLid=1,
+     TinCanEmpty=1,
+
+     Result:CannedCarrotsHomeMade,
+     Time:80.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:OpenCannedFood,
+     SkillRequired: Cooking=8,
+  }
+
+  recipe Open Canned Carrots
+  {
+     CannedCarrotsHomeMade,
+
+     OnCreate:Recipe.OnCreate.OpenCannedFoodHomeMade,
+     Result:CannedCarrotsOpen,
+     Time:80.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     Sound:OpenCannedFood,
+  }
+
+  recipe Create tomato paste
+  {
+     Tomato=3,
+     keep [Recipe.GetItemTypes.MortarPestle],
+
+     Result:TomatoPasteHomeMade,
+     Time:60.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     SkillRequired: Cooking=10,
+  }
+
+  recipe Create carrot sugar
+  {
+    Carrots=10,
+    keep [Recipe.GetItemTypes.MortarPestle],
+
+    Result: SugarCarrot=1,
+    Time: 60.0,
+    Category: Cooking,
+    OnGiveXP:Recipe.OnGiveXP.None,
+    SkillRequired: Cooking=10,
+  }
+
+  recipe Create tomato vinegar
+  {
+    Tomato=5,
+
+    Result: VinegarTomato=1,
+    Sound: PutItemInBag,
+    Category: Cooking,
+    Time: 150.0,
+    SkillRequired: Cooking=10,
+  }
+
+  recipe Create home made glue {
+    BakingSoda=1,
+    Salt=1,
+    [Recipe.GetItemTypes.Flour]=2,
+    [Recipe.GetItemTypes.Vinegar]=1,
+    destroy WaterPot,
+
+    Result: HomeMadeGlueRaw=1,
+    Time: 60.0,
+    Category: Cooking,
+    OnGiveXP:Recipe.OnGiveXP.None,
+    SkillRequired: Cooking=8,
+  }
+
+  recipe Refill glue bottle {
+    HomeMadeGlue=1,
+
+    Result: Glue=25,
+    Time: 60.0,
+    Category: General,
+    OnGiveXP:Recipe.OnGiveXP.None,
+  }
+
+  recipe Create radish spice {
+    EmptyJar,
+    JarLid,
+    farming.RedRadish=5,
+    keep [Recipe.GetItemTypes.SharpKnife],
+
+    Result: RadishSpice=1,
+    Time: 60.0,
+    Category: Cooking,
+    OnGiveXP:Recipe.OnGiveXP.None,
+    SkillRequired: Cooking=10,
+  }
+
+  recipe Create home made ketchup
+  {
+     Tomato=5,
+     [Recipe.GetItemTypes.Vinegar];1,
+     keep [Recipe.GetItemTypes.MortarPestle],
+
+     Result:HomemadeKetchup,
+     Time:60.0,
+     Category:Cooking,
+     OnGiveXP:Recipe.OnGiveXP.None,
+     SkillRequired: Cooking=10,
+  }
+
+  recipe Remove jar lid
+  {
+    EmptyJarWithLid,
+
+    Result: EmptyJar,
+    Time: 40.0,
+    OnCreate: Recipe.OnCreate.ReturnLid,
+    Category: Cooking,
+  }
+}

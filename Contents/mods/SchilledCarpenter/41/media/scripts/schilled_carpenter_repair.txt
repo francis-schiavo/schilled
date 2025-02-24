@@ -1,0 +1,14 @@
+module SchilledCarpenter {
+  import {
+    Base
+  }
+
+  fixing Fix tool handles
+  {
+    Require: WoodAxe;Axe;Sledgehammer;Sledgehammer2,
+
+    ConditionModifier: 10,
+
+    Fixer: WoodenStick=1;Woodwork=5,
+  }
+}

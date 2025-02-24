@@ -1,0 +1,177 @@
+module SchilledMechanic {
+  import {
+    Base
+  }
+
+  recipe Recycle vehicle seat {
+    NormalCarSeat1/NormalCarSeat2/NormalCarSeat3,
+    Prop1: Scissors,
+    keep [Recipe.GetItemTypes.Scissors],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.Tailoring,
+    Result:Thread=2,
+    Time:80.0,
+    Sound:ClothesRipping,
+    Category:Recycling,
+    SkillRequired:Tailoring=4,
+    OnCreate:Recipe.OnCreate.RecycleCarSeats,
+  }
+
+  recipe Recycle battery {
+    destroy CarBattery1/CarBattery2/CarBattery3,
+    keep [Recipe.GetItemTypes.Screwdriver],
+
+    OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    Result:ElectronicsScrap=3,
+    Time:80.0,
+    Sound:Dismantle,
+    Category:Recycling,
+    SkillRequired:Electricity=3,
+    OnCreate:Recipe.OnCreate.RecycleElectronics,
+  }
+
+  recipe Recycle suspension {
+    NormalSuspension1/NormalSuspension2/NormalSuspension3/ModernSuspension1/ModernSuspension2/ModernSuspension3/leafSuspension2,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:ScrapMetal=2,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleMetalPipePart,
+  }
+
+  recipe Recycle brake {
+    OldBrake1/OldBrake2/OldBrake3/NormalBrake1/NormalBrake2/NormalBrake3/ModernBrake1/ModernBrake2/ModernBrake3,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:ScrapMetal=2,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleMetalPipePart,
+  }
+
+  recipe Recycle muffler {
+    OldCarMuffler1/OldCarMuffler2/OldCarMuffler3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:ScrapMetal=3,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleSmallMetalSheetPart,
+  }
+
+  recipe Recycle gas tank {
+    SmallGasTank1/NormalGasTank1/BigGasTank1/SmallGasTank2/NormalGasTank2/BigGasTank2/SmallGasTank3/NormalGasTank3/BigGasTank3,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    Result:ScrapMetal=3,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleSmallMetalSheetPart,
+  }
+
+  recipe Recycle door {
+    FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3,
+    BlowTorch=1,
+    Prop1:BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:ScrapMetal=6,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleMetalSheetPart,
+  }
+
+  recipe Recycle hood {
+    EngineDoor1/EngineDoor2/EngineDoor3,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    Result:ScrapMetal=6,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleMetalSheetPart,
+  }
+
+  recipe Recycle trunk door {
+    TrunkDoor1/TrunkDoor2/TrunkDoor3,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    Result:ScrapMetal=6,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleMetalSheetPart,
+  }
+
+  recipe Recycle trailer trunk {
+    TrailerTrunk1/TrailerTrunk2/TrailerTrunk3,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    Result:ScrapMetal=6,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:MetalWelding=5,
+    OnCreate:Recipe.OnCreate.RecycleMetalSheetPart,
+  }
+
+  recipe Recycle trunk {
+    SmallTrunk1/NormalTrunk1/BigTrunk1/SmallTrunk2/NormalTrunk2/BigTrunk2/SmallTrunk3/NormalTrunk3/BigTrunk3/VanSeatsTrunk2,
+    BlowTorch=1,
+    Prop1: BlowTorch,
+    keep [Recipe.GetItemTypes.WeldingMask],
+    CanBeDoneFromFloor:true,
+
+    OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    Result:ScrapMetal=6,
+    Time:80.0,
+    Sound:BlowTorch,
+    Category:Recycling,
+    SkillRequired:SheetMetal,
+    OnCreate:Recipe.OnCreate.RecycleMetalSheetPart,
+  }
+}

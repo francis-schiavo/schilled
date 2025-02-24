@@ -1,0 +1,48 @@
+module Base {
+  item LogStacks2
+  {
+    DisplayCategory = Material,
+    Weight = 4,
+    Type = Normal,
+    DisplayName = Two Logs Stack,
+    Icon = Logs2,
+    WorldStaticModel = TwoLogsStack,
+  }
+
+  item LogStacks3
+  {
+    DisplayCategory = Material,
+    Weight = 7,
+    Type = Normal,
+    DisplayName = Three Logs Stack,
+    Icon = Logs3,
+    WorldStaticModel = ThreeLogsStack,
+  }
+
+  item LogStacks4
+  {
+    DisplayCategory = Material,
+    Weight = 9,
+    Type = Normal,
+    DisplayName = Four Logs Stack,
+    Icon = Logs4,
+    WorldStaticModel = FourLogsStack,
+  }
+
+  recipe Saw Logs
+  {
+    Log,
+    keep [Recipe.GetItemTypes.Saw],
+
+    CanBeDoneFromFloor:true,
+    Result:Plank=4,
+    Sound:Sawing,
+    Time:230.0,
+    Category:Carpentry,
+    OnGiveXP:Recipe.OnGiveXP.SawLogs,
+    AnimNode:SawLog,
+    Prop1:Source=2,
+    Prop2:Log,
+    Override: true
+  }
+}

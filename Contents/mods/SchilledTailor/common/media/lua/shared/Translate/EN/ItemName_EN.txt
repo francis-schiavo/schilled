@@ -1,0 +1,7 @@
+ItemName_EN = {
+  ItemName_SchilledTailor.ReinforcedALICEpack = "Reinforced Large Backpack",
+  ItemName_SchilledTailor.ReinforcedALICEpack_Army = "Reinforced Military Backpack",
+  ItemName_SchilledTailor.ReinforcedALICEpack_DesertCamo = "Reinforced Military Backpack",
+  ItemName_SchilledTailor.ReinforcedSewingKit = "Reinforced Sewing Kit",
+  ItemName_SchilledTailor.ReinforcedFirstAidKit = "Reinforced First Aid Kit",
+}

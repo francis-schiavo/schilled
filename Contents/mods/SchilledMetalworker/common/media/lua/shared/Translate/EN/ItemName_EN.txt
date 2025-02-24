@@ -1,0 +1,6 @@
+ItemName_EN = {
+  ItemName_SchilledMetalworker.ReinforcedMachete = "Reinforced Machete",
+  ItemName_SchilledMetalworker.SuperMachete = "Super Machete",
+  ItemName_SchilledMetalworker.ReinforcedToolbox = "Reinforced Toolbox",
+  ItemName_SchilledMetalworker.KeymasterMag = "Keymaster Magazine",
+}

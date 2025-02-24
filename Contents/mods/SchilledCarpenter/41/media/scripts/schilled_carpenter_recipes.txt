@@ -1,0 +1,61 @@
+module SchilledCarpenter {
+  import {
+    Base
+  }
+
+  recipe Repair Wood Axe
+  {
+    WoodAxe,
+    WoodenStick=1,
+    keep [Recipe.GetItemTypes.Hammer],
+
+    OnCreate:Recipe.OnCreate.Repair_OnCreate,
+    Result:WoodAxe,
+    SkillRequired:Woodwork=5,
+    Sound:Hammering,
+    Time:100.0,
+    Category:Carpentry,
+  }
+
+  recipe Repair Axe
+  {
+    Axe,
+    WoodenStick=1,
+    keep [Recipe.GetItemTypes.Hammer],
+
+    OnCreate:Recipe.OnCreate.Repair_OnCreate,
+    Result:Axe,
+    SkillRequired:Woodwork=5,
+    Sound:Hammering,
+    Time:100.0,
+    Category:Carpentry,
+  }
+
+  recipe Repair Sledgehammer
+  {
+    Sledgehammer,
+    WoodenStick=1,
+    keep [Recipe.GetItemTypes.Hammer],
+
+    OnCreate:Recipe.OnCreate.Repair_OnCreate,
+    Result:Sledgehammer,
+    SkillRequired:Woodwork=8,
+    Sound:Hammering,
+    Time:100.0,
+    Category:Carpentry,
+  }
+
+  recipe Repair Sledgehammer
+  {
+    Sledgehammer2,
+    WoodenStick=1,
+    keep [Recipe.GetItemTypes.Hammer],
+
+    OnCreate:Recipe.OnCreate.Repair_OnCreate,
+    Result:Sledgehammer2,
+    SkillRequired:Woodwork=8,
+    Sound:Hammering,
+    Time:100.0,
+    Category:Carpentry,
+  }
+}

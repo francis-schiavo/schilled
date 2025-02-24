@@ -1,0 +1,67 @@
+module SchilledMetalworker {
+  import {
+    Base
+  }
+
+  craftRecipe ReinforceMachete {
+    timedAction = Welding,
+    time = 150,
+    tags = InHandCraft;CanBeDoneFromFloor,
+    Category = Welding,
+    SkillRequired = MetalWelding:5,
+    xpAward = MetalWelding:25,
+
+    inputs {
+      item 1 [Base.Machete],
+      item 2 [Base.BlowTorch] flags[Prop1],
+      item 1 tags[WeldingMask] mode:keep,
+      item 1 [Base.WeldingRods],
+      item 1 [Base.MetalBar],
+    }
+    outputs {
+      item 1 SchilledMetalworker.ReinforcedMachete,
+    }
+  }
+
+  craftRecipe MakeSuperMachete {
+    timedAction = Welding,
+    time = 150,
+    tags = InHandCraft;CanBeDoneFromFloor,
+    Category = Welding,
+    SkillRequired = MetalWelding:8,
+    xpAward = MetalWelding:45,
+
+    inputs {
+      item 3 [Base.Machete],
+      item 2 [Base.BlowTorch] flags[Prop1],
+      item 1 tags[WeldingMask] mode:keep,
+      item 2 [Base.WeldingRods],
+      item 1 [Base.MetalBar],
+    }
+    outputs {
+      item 1 SchilledMetalworker.SuperMachete,
+    }
+  }
+
+  craftRecipe MakeReinforcedToolbox {
+    timedAction = Welding,
+    time = 150,
+    tags = InHandCraft;CanBeDoneFromFloor,
+    Category = Welding,
+    SkillRequired = MetalWelding:8,
+    xpAward = MetalWelding:45,
+
+    inputs {
+      item 2 [Base.BlowTorch] flags[Prop1],
+      item 2 tags[WeldingMask] mode:keep,
+      item 2 [Base.WeldingRods],
+      item 2 [Base.Hinge],
+      item 2 [Base.SheetMetal],
+      item 2 [Base.MetalBar],
+      item 1 [Base.Toolbox],
+    }
+    outputs {
+      item 1 SchilledMetalworker.ReinforcedToolbox,
+    }
+  }
+}

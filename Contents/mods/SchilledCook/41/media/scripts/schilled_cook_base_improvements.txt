@@ -1,0 +1,167 @@
+module Base {
+  recipe Make Jar of Tomatoes
+  {
+    EmptyJar,
+    JarLid,
+    farming.Tomato=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result: CannedTomato,
+    Time: 100.0,
+    OnCreate: Recipe.OnCreate.CannedFood,
+    Category: Cooking,
+    OnGiveXP: Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Carrots
+  {
+    EmptyJar,
+    JarLid,
+    Carrots=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedCarrots,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Potatoes
+  {
+    EmptyJar,
+    JarLid,
+    farming.Potato=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedPotato,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Eggplants
+  {
+    EmptyJar,
+    JarLid,
+    Eggplant=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedEggplant,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Leeks
+  {
+    EmptyJar,
+    JarLid,
+    Leek=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedLeek,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Red Radishes
+  {
+    EmptyJar,
+    JarLid,
+    farming.RedRadish=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedRedRadish,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Bell Peppers
+  {
+    EmptyJar,
+    JarLid,
+    BellPepper=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedBellPepper,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Cabbage
+  {
+    EmptyJar,
+    JarLid,
+    farming.Cabbage=3,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedCabbage,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  recipe Make Jar of Broccoli
+  {
+    EmptyJar,
+    JarLid,
+    Broccoli=5,
+    Water=10,
+    [Recipe.GetItemTypes.Vinegar];2,
+    [Recipe.GetItemTypes.Sugar];1,
+
+    Result:CannedBroccoli,
+    Time:100.0,
+    OnCreate:Recipe.OnCreate.CannedFood,
+    Category:Cooking,
+    OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    Override: true
+  }
+
+  item Soap2
+  {
+    DisplayCategory=Household,
+    Type=Drainable,
+    UseDelta=0.05,
+    UseWhileEquipped=FALSE,
+    DisplayName=Soap,
+    Icon=Soap,
+    Weight=0.1,
+    WorldStaticModel=Soap,
+    ConsolidateOption = ContextMenu_Merge,
+  }
+}

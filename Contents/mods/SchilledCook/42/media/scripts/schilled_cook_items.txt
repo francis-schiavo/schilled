@@ -1,0 +1,80 @@
+module SchilledCook {
+  import {
+    Base
+  }
+
+  item PotOfHomeMadeGlue
+  {
+    DisplayName = Homemade glue,
+    DisplayCategory = Material,
+    Type = Drainable,
+    UseDelta = 0.25,
+    Weight = 1.0,
+    Icon	=	Pot,
+    StaticModel = CookingPot,
+    WorldStaticModel = CookingPotSoup_Ground,
+    Tooltip = Tooltip_FixItems,
+    Tags = Glue,
+    ConsolidateOption = ContextMenu_Merge,
+    ReplaceOnUse=Base.Pot,
+    ReplaceOnDeplete=Base.Pot,
+  }
+
+  item ForgedPotOfHomeMadeGlue
+  {
+    DisplayName = Homemade glue,
+    DisplayCategory = Material,
+    Type = Drainable,
+    UseDelta = 0.25,
+    Weight = 1.0,
+    Icon	=	Pot_Forged,
+    StaticModel = CookingPotForged,
+    WorldStaticModel = CookingPotForgedGround,
+    Tags = Glue,
+    ConsolidateOption = ContextMenu_Merge,
+    ReplaceOnUse=Base.PotForged,
+    ReplaceOnDeplete=Base.PotForged,
+  }
+
+  item PotOfHomeMadeGlueRaw
+  {
+    DisplayName = Raw homemade glue,
+    DisplayCategory = Material,
+    Type = Food,
+    PoisonPower = 120,
+    UnhappyChange = 99,
+    CustomContextMenu = Drink,
+    Weight = 1.0,
+    Icon	=	Pot,
+    StaticModel = CookingPot,
+    WorldStaticModel = CookingPotSoup_Ground,
+    ReplaceOnUse = SchilledCook.PotOfHomeMadeGlue,
+    IsCookable=true,
+    MinutesToCook=20,
+    MinutesToBurn=50,
+    DaysFresh = 160,
+    DaysTotallyRotten = 420,
+    ReplaceOnCooked=SchilledCook.PotOfHomeMadeGlue,
+  }
+
+  item ForgedPotOfHomeMadeGlueRaw
+  {
+    DisplayName = Raw homemade glue,
+    DisplayCategory = Material,
+    Type = Food,
+    PoisonPower = 120,
+    UnhappyChange = 99,
+    CustomContextMenu = Drink,
+    Weight = 1.0,
+    Icon	=	Pot_Forged,
+    StaticModel = CookingPotForged,
+    WorldStaticModel = CookingPotForgedGround,
+    ReplaceOnUse = SchilledCook.ForgedPotOfHomeMadeGlue,
+    IsCookable=true,
+    MinutesToCook=20,
+    MinutesToBurn=50,
+    DaysFresh = 160,
+    DaysTotallyRotten = 420,
+    ReplaceOnCooked=SchilledCook.ForgedPotOfHomeMadeGlue,
+  }
+}

@@ -1,0 +1,14 @@
+Recipes_PTBR = {
+    Recipe_CraftSpareEngineParts = "Criar peças de reposição",
+    Recipe_RecycleVehicleSeat = "Reciclar banco de veículo",
+    Recipe_RecycleBattery = "Reciclar bateria",
+    Recipe_RecycleSuspension = "Reciclar suspensão",
+    Recipe_RecycleBrake = "Reciclar freio",
+    Recipe_RecycleMuffler = "Reciclar silenciador",
+    Recipe_RecycleGasTank = "Reciclar tanque de gasolina",
+    Recipe_RecycleDoor = "Reciclar porta",
+    Recipe_RecycleHood = "Reciclar capô",
+    Recipe_RecycleTrunk = "Reciclar porta-malas",
+    RecycleTrailerTrunk = "Reciclar porta-malas do reboque",
+    Recipe_RecycleTrunkDoor = "Reciclar porta do porta-malas",
+}

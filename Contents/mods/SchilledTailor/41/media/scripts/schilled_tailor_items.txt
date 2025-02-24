@@ -1,0 +1,107 @@
+module SchilledTailor {
+  import {
+    Base
+  }
+
+  item ReinforcedFannyPackFront
+  {
+    DisplayCategory=Bag,
+    WeightReduction=95,
+    ClothingItemExtra=ReinforcedFannyPackBack,
+    ClothingItemExtraOption=FannyPack_WearBack,
+    clothingExtraSubmenu=FannyPack_WearFront,
+    Weight=0.1,
+    Type=Container,
+    Capacity=15,
+    DisplayName=Reinforced Fanny Pack (Front),
+    Icon=FannyPack,
+    OpenSound=OpenBag,
+    CloseSound=CloseBag,
+    PutInSound=PutItemInBag,
+    BodyLocation=FannyPackFront,
+    ClothingItem=Bag_FannyPackFront,
+    CanBeEquipped=FannyPackFront,
+    RunSpeedModifier=0.98,
+    WorldStaticModel=FannyPack_Ground,
+  }
+
+  item ReinforcedFannyPackBack
+  {
+    DisplayCategory=Bag,
+    WeightReduction=95,
+    ClothingItemExtra=ReinforcedFannyPackFront,
+    ClothingItemExtraOption=FannyPack_WearFront,
+    clothingExtraSubmenu=FannyPack_WearBack,
+    Weight=0.1,
+    Type=Container,
+    Capacity=15,
+    DisplayName=Reinforced Fanny Pack (Back),
+    Icon=FannyPack,
+    OpenSound=OpenBag,
+    CloseSound=CloseBag,
+    PutInSound=PutItemInBag,
+    BodyLocation=FannyPackBack,
+    ClothingItem=Bag_FannyPackBack,
+    CanBeEquipped=FannyPackBack,
+    RunSpeedModifier=0.98,
+    WorldStaticModel=FannyPack_Ground,
+  }
+
+  item ReinforcedALICEpack_Army
+  {
+    DisplayCategory=Bag,
+    Type=Container,
+    DisplayName= Reinforced Military Backpack,
+    ClothingItem=Bag_ALICEpack_Army,
+    CanBeEquipped=Back,
+    WeightReduction	=	95,
+    Weight=1,
+    Capacity=60,
+    Icon=AliceBag_Camo,
+    OpenSound=OpenBag,
+    CloseSound=CloseBag,
+    PutInSound=PutItemInBag,
+    BloodLocation=Bag,
+    RunSpeedModifier=0.94,
+    CanHaveHoles=false,
+    AttachmentReplacement=Bag,
+    ReplaceInSecondHand=Bag_ALICEpack_Army_LHandholdingbagleft,
+    ReplaceInPrimaryHand=Bag_ALICEpack_Army_RHandholdingbagright,
+    WorldStaticModel = ALICE_Pack_Ground,
+  }
+
+  item ReinforcedSewingKit
+  {
+    DisplayCategory = Container,
+    WeightReduction=60,
+    Weight=0.1,
+    Type=Container,
+    Capacity=7,
+    DisplayName=Reinforced Sewing Kit,
+    Icon=SewingBox,
+    OpenSound = OpenBag,
+    CloseSound = CloseBag,
+    PutInSound = PutItemInBag,
+    SurvivalGear = TRUE,
+    WorldStaticModel = SewingKit,
+  }
+
+  item ReinforcedFirstAidKit
+  {
+    DisplayCategory = Container,
+    WeightReduction=60,
+    Weight=0.7,
+    Type=Container,
+    Capacity=8,
+    DisplayName=Reinforced First Aid Kit,
+    Icon=FirstAid,
+    OpenSound = OpenBag,
+    CloseSound = CloseBag,
+    PutInSound = PutItemInBag,
+    MetalValue = 15,
+    Medical = TRUE,
+    ReplaceInSecondHand = Bag_FirstAidKit_LHand holdingbagleft,
+    ReplaceInPrimaryHand = Bag_FirstAidKit_RHand holdingbagright,
+    WorldStaticModel = LunchBoxMedic_Ground,
+  }
+}

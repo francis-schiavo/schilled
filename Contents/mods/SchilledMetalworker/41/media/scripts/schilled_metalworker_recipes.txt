@@ -1,0 +1,62 @@
+module SchilledMetalworker {
+  import {
+    Base
+  }
+
+  recipe Reinforce Machete {
+    BlowTorch=2,
+    WeldingRods=1,
+    MetalBar=1,
+    Machete=1,
+    keep [Recipe.GetItemTypes.WeldingMask],
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:ReinforcedMachete,
+    Time:150.0,
+    Sound:BlowTorch,
+    Category:Welding,
+    SkillRequired:MetalWelding=5,
+  }
+
+  recipe Make Super Machete {
+    BlowTorch=2,
+    WeldingRods=2,
+    MetalBar=1,
+    Machete=3,
+    keep [Recipe.GetItemTypes.WeldingMask],
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:SuperMachete,
+    Time:150.0,
+    Sound:BlowTorch,
+    Category:Welding,
+    SkillRequired:MetalWelding=8,
+  }
+
+  recipe Make Non Combat Scissors {
+    Scissors=1,
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:NonCombatScissors,
+    Time:60.0,
+    Category:Welding,
+    SkillRequired:MetalWelding=2,
+  }
+
+  recipe Make Reinforced Toolbox {
+    BlowTorch=2,
+    WeldingRods=2,
+    MetalBar=2,
+    SheetMetal=2,
+    Toolbox=1,
+    Hinge=2,
+    keep [Recipe.GetItemTypes.WeldingMask],
+
+    OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    Result:ReinforcedToolbox,
+    Time:150.0,
+    Sound:BlowTorch,
+    Category:Welding,
+    SkillRequired:MetalWelding=5,
+  }
+}

@@ -1,0 +1,106 @@
+module SchilledTailor {
+  import {
+    Base
+  }
+
+  recipe Reinforce Fanny Pack
+  {
+    DenimStrips=10,
+    LeatherStrips=5,
+    Bag_FannyPackFront,
+
+    Result: ReinforcedFannyPackFront,
+    Sound: PutItemInBag,
+    Time: 150.0,
+    SkillRequired: Tailoring=10,
+  }
+
+  recipe Reinforce Fanny Pack
+  {
+    DenimStrips=10,
+    LeatherStrips=5,
+    Bag_FannyPackBack,
+
+    Result: ReinforcedFannyPackBack,
+    Sound: PutItemInBag,
+    Time: 150.0,
+    SkillRequired: Tailoring=10,
+  }
+
+  recipe Reinforce BackPack
+  {
+    DenimStrips=30,
+    LeatherStrips=25,
+    Bag_ALICEpack_Army,
+
+    Result: ReinforcedALICEpack_Army,
+    Sound: PutItemInBag,
+    Time: 150.0,
+    SkillRequired: Tailoring=10,
+  }
+
+  recipe Reinforce Sewing Kit
+  {
+    DenimStrips=10,
+    LeatherStrips=5,
+    SewingKit,
+
+    Result: ReinforcedSewingKit,
+    Sound: PutItemInBag,
+    Time: 150.0,
+    SkillRequired: Tailoring=10,
+  }
+
+  recipe Reinforce First Aid Kit
+  {
+    DenimStrips=10,
+    LeatherStrips=5,
+    FirstAidKit,
+
+    Result: ReinforcedFirstAidKit,
+    Sound: PutItemInBag,
+    Time: 150.0,
+    SkillRequired: Tailoring=10,
+  }
+
+  recipe Rip Clothing
+  {
+    [Recipe.GetItemTypes.RipClothing_Cotton],
+
+    Result:RippedSheets,
+    RemoveResultItem:true,
+    InSameInventory:true,
+    Sound:ClothesRipping,
+    Time:10.0,
+    AnimNode:RipSheets,
+    OnCreate:Recipe.OnCreate.RipClothing,
+  }
+
+  recipe Rip Clothing
+  {
+    [Recipe.GetItemTypes.RipClothing_Denim],
+    keep [Recipe.GetItemTypes.Scissors],
+
+    Result:DenimStrips,
+    RemoveResultItem:true,
+    InSameInventory:true,
+    Sound:ClothesRipping,
+    Time:10.0,
+    AnimNode:RipSheets,
+    OnCreate:Recipe.OnCreate.RipClothing,
+  }
+
+  recipe Rip Clothing
+  {
+    [Recipe.GetItemTypes.RipClothing_Leather],
+    keep [Recipe.GetItemTypes.Scissors],
+
+    Result:LeatherStrips,
+    RemoveResultItem:true,
+    InSameInventory:true,
+    Sound:ClothesRipping,
+    Time:10.0,
+    AnimNode:RipSheets,
+    OnCreate:Recipe.OnCreate.RipClothing,
+  }
+}

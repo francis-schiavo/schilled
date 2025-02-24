@@ -1,0 +1,153 @@
+module SchilledMetalworker {
+  import {
+    Base
+  }
+
+  item ReinforcedMachete
+  {
+    DisplayCategory=Weapon,
+    MaxRange=1.23,
+    WeaponSprite=Machete,
+    MinAngle=0.7,
+    Type=Weapon,
+    SwingSound=MacheteSwing,
+    HitFloorSound=MacheteHit,
+    ImpactSound=MacheteHit,
+    DoorHitSound=MacheteHit,
+    HitSound=MacheteHit,
+    MinimumSwingTime=4,
+    KnockBackOnNoDeath=FALSE,
+    SwingAmountBeforeImpact=0.02,
+    Categories=LongBlade,
+    ConditionLowerChanceOneIn=500,
+    Weight=2,
+    SplatNumber=2,
+    PushBackMod=0.3,
+    SubCategory=Swinging,
+    ConditionMax=13,
+    MaxHitCount=3,
+    DoorDamage=10,
+    SwingAnim=Bat,
+    DisplayName=Reinforced Machete,
+    MinRange=0.61,
+    SwingTime=4,
+    KnockdownMod=2,
+    SplatBloodOnNoDeath=FALSE,
+    Icon=Machete,
+    TreeDamage=10,
+    CriticalChance=30,
+    CritDmgMultiplier=5,
+    MinDamage=4,
+    MaxDamage=6,
+    BaseSpeed=1,
+    WeaponLength=0.3,
+    DamageCategory=Slash,
+    DamageMakeHole=TRUE,
+    AttachmentType=BigBlade,
+    Tags=CutPlant;SharpKnife,
+    DoorHitSound=MacheteHit,
+    HitSound=MacheteHit,
+    HitFloorSound=MacheteHit,
+    BreakSound=MacheteBreak,
+    SwingSound=MacheteSwing,
+    NeverRepaired=true,
+  }
+
+  item SuperMachete
+  {
+    DisplayCategory=Weapon,
+    MaxRange=1.23,
+    WeaponSprite=Machete,
+    MinAngle=0.7,
+    Type=Weapon,
+    SwingSound=MacheteSwing,
+    HitFloorSound=MacheteHit,
+    ImpactSound=MacheteHit,
+    DoorHitSound=MacheteHit,
+    HitSound=MacheteHit,
+    MinimumSwingTime=4,
+    KnockBackOnNoDeath=FALSE,
+    SwingAmountBeforeImpact=0.02,
+    Categories=LongBlade,
+    ConditionLowerChanceOneIn=2000,
+    Weight=2,
+    SplatNumber=2,
+    PushBackMod=0.3,
+    SubCategory=Swinging,
+    ConditionMax=13,
+    MaxHitCount=3,
+    DoorDamage=10,
+    SwingAnim=Bat,
+    DisplayName=Super Machete,
+    MinRange=0.61,
+    SwingTime=4,
+    KnockdownMod=2,
+    SplatBloodOnNoDeath=FALSE,
+    Icon=Machete,
+    TreeDamage=10,
+    CriticalChance=40,
+    CritDmgMultiplier=5,
+    MinDamage=6,
+    MaxDamage=10,
+    BaseSpeed=1,
+    WeaponLength=0.3,
+    DamageCategory=Slash,
+    DamageMakeHole=TRUE,
+    AttachmentType=BigBlade,
+    Tags=CutPlant;SharpKnife,
+    DoorHitSound=MacheteHit,
+    HitSound=MacheteHit,
+    HitFloorSound=MacheteHit,
+    BreakSound=MacheteBreak,
+    SwingSound=MacheteSwing,
+    NeverRepaired=true,
+  }
+
+  item NonCombatScissors
+  {
+    DisplayCategory=Household,
+    Type=Normal,
+    Weight=0.4,
+    DisplayName=Non combate Scissors,
+    Icon=Scissors,
+    Tags=Scissors,
+  }
+
+  item ReinforcedToolbox
+  {
+    DisplayCategory=Container,
+    WeightReduction=80,
+    Weight=2,
+    Type=Container,
+    Capacity=20,
+    DisplayName=Reinforced Toolbox,
+    Icon=Toolbox,
+    RunSpeedModifier=0.97,
+    OpenSound=OpenBag,
+    CloseSound=CloseBag,
+    PutInSound=PutItemInBag,
+    ReplaceInSecondHand = Bag_Toolbox_LHand holdingbagleft,
+    ReplaceInPrimaryHand = Bag_Toolbox_RHand holdingbagright,
+    WorldStaticModel = ToolBox_Ground,
+  }
+
+  model MagazineMetal1Ground
+  {
+    mesh=WorldItems/Magazine,
+    texture=WorldItems/MagazineKeys,
+    scale=0.4,
+  }
+
+  item KeymasterMag
+  {
+    DisplayCategory=SkillBook,
+    Weight=0.1,
+    Type=Literature,
+    DisplayName=The Keymaster,
+    Icon=MagazineKeymaster,
+    TeachedRecipes=Make car key;Make door key,
+    ReplaceOnUse=KeymasterMag,
+    StaticModel=Magazine,
+    WorldStaticModel=MagazineMetal1Ground,
+  }
+}

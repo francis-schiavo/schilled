@@ -1,0 +1,19 @@
+module Base {
+  item BlowTorch
+  {
+    Override = true,
+    DisplayCategory = Tool,
+    Weight = 1.0,
+    Type = Drainable,
+    UseWhileEquipped = FALSE,
+    UseDelta = 0.005,
+    DisplayName = Welding Torch,
+    WeightEmpty = 0.3,
+    Icon = BlowTorch,
+    KeepOnDeplete = true,
+    MetalValue = 20,
+    cantBeConsolided = TRUE,
+    StaticModel = BlowTorch,
+    WorldStaticModel = BlowtorchGround,
+  }
+}

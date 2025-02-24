@@ -1,0 +1,5 @@
+Recipes_PTBR = {
+    Recipe_ReinforceMachete = "Reforçar Machete",
+    Recipe_MakeSuperMachete = "Fazer Super Machete",
+    Recipe_MakeReinforcedToolbox = "Fazer Caixa de Ferramentas Reforçada",
+}

@@ -1,0 +1,122 @@
+module SchilledTailor {
+  import {
+    Base
+  }
+
+  item ReinforcedALICEpack
+  {
+    AttachmentReplacement=Bag,
+    AttachmentsProvided=BedrollBottomALICE,
+    BloodLocation=Bag,
+    CanBeEquipped=Back,
+    CanHaveHoles=FALSE,
+    Capacity=60,
+    CloseSound=CloseBag,
+    ClothingItem=Bag_ALICEpack,
+    DisplayCategory=Bag,
+    DisplayName=Reinforced Military Backpack,
+    EquipSound=EquipBackpackLarge,
+    Icon=AliceBag,
+    OpenSound=OpenBag,
+    PutInSound=PutItemInBag,
+    ReplaceInPrimaryHand=Bag_ALICEpack_RHand holdingbagright,
+    ReplaceInSecondHand=Bag_ALICEpack_LHand holdingbagleft,
+    RunSpeedModifier=0.94,
+    Tags=IgnoreZombieDensity;IsFireFuel;IsFireTinder,
+    Type=Container,
+    Weight=1,
+    WeightReduction=95,
+    WorldStaticModel=ALICE_Pack_Ground,
+  }
+
+  item ReinforcedALICEpack_Army
+  {
+    AttachmentReplacement=Bag,
+    AttachmentsProvided=BedrollBottomALICE,
+    BloodLocation=Bag,
+    CanBeEquipped=Back,
+    CanHaveHoles=FALSE,
+    Capacity=60,
+    CloseSound=CloseBag,
+    ClothingItem=Bag_ALICEpack_Army,
+    DisplayCategory=Bag,
+    DisplayName=Reinforced Military Backpack,
+    EquipSound=EquipBackpackLarge,
+    Icon=AliceBag_Camo,
+    OpenSound=OpenBag,
+    PutInSound=PutItemInBag,
+    ReplaceInPrimaryHand=Bag_ALICEpack_Army_RHand holdingbagright,
+    ReplaceInSecondHand=Bag_ALICEpack_Army_LHand holdingbagleft,
+    RunSpeedModifier=0.94,
+    Tags=IgnoreZombieDensity;IsFireFuel;IsFireTinder,
+    Type=Container,
+    Weight=1,
+    WeightReduction=95,
+    WorldStaticModel=ALICE_Pack_Ground,
+  }
+
+  item ReinforcedALICEpack_DesertCamo
+	{
+    AttachmentReplacement=Bag,
+    AttachmentsProvided=BedrollBottomALICE,
+    BloodLocation=Bag,
+    CanBeEquipped=Back,
+    CanHaveHoles=FALSE,
+    Capacity=60,
+    CloseSound=CloseBag,
+    ClothingItem=Bag_ALICEpack_DesertCamo,
+    DisplayCategory=Bag,
+    DisplayName=Reinforced Military Backpack,
+    EquipSound=EquipBackpackLarge,
+    Icon=AliceBag_SandCamo,
+    OpenSound=OpenBag,
+    PutInSound=PutItemInBag,
+    ReplaceInPrimaryHand=Bag_ALICEpack_DesertCamo_RHand holdingbagright,
+    ReplaceInSecondHand=Bag_ALICEpack_DesertCamo_LHand holdingbagleft,
+    RunSpeedModifier=0.94,
+    Tags=IgnoreZombieDensity;IsFireFuel;IsFireTinder,
+    Type=Container,
+    Weight=1,
+    WeightReduction=95,
+    WorldStaticModel=ALICE_Pack_Ground,
+	}
+
+  item ReinforcedSewingKit
+  {
+    Capacity=7,
+    CloseSound=CloseSmallWoodenBox,
+    DisplayCategory=Container,
+    DisplayName=Reinforced Sewing Kit,
+    Icon=SewingBox,
+    MaxItemSize=0.3,
+    OpenSound=OpenSmallWoodenBox,
+    PutInSound=StoreItemSmallWoodenBox,
+    SurvivalGear=TRUE,
+    Tags=NeverEmpty;BagsFillException;HasMetal,
+    Type=Container,
+    Weight=0.1,
+    WeightReduction=60,
+    WorldStaticModel=SewingBox,
+  }
+
+  item ReinforcedFirstAidKit
+  {
+    Capacity=8,
+    CloseSound=CloseSmallMetalBox,
+    DisplayCategory=Container,
+    DisplayName=Reinforced First Aid Kit,
+    Icon=FirstAid,
+    MaxItemSize=1,
+    Medical=TRUE,
+    MetalValue=15,
+    OpenSound=OpenSmallMetalBox,
+    PutInSound=StoreItemSmallMetalBox,
+    ReplaceInPrimaryHand=Bag_FirstAidKit_RHand holdingbagright,
+    ReplaceInSecondHand=Bag_FirstAidKit_LHand holdingbagleft,
+    Tags=NeverEmpty;BagsFillException;HasMetal,
+    Type=Container,
+    Weight=0.7,
+    WeightReduction=60,
+    WorldStaticModel=LunchBoxMedic_Ground,
+  }
+}

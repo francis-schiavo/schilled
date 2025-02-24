@@ -1,0 +1,6 @@
+ItemName_PTBR = {
+  ItemName_SchilledMetalworker.ReinforcedMachete = "Facão Reforçado",
+  ItemName_SchilledMetalworker.SuperMachete = "Super Facão",
+  ItemName_SchilledMetalworker.ReinforcedToolbox = "Caixa de Ferramentas Reforçada",
+  ItemName_SchilledMetalworker.KeymasterMag = "Mestre da chaves",
+}

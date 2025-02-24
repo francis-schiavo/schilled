@@ -1,0 +1,5 @@
+Recipes_PTBR = {
+    Recipe_ReinforceBackPack = "Reforçar mochila",
+    Recipe_ReinforceSewingKit = "Reforçar kit de costura",
+    Recipe_ReinforceFirstAidKit = "Reforçar kit de primeiros socorros",
+}

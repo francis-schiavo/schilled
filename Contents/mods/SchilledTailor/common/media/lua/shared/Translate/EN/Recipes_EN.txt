@@ -1,0 +1,5 @@
+Recipes_EN = {
+    Recipe_ReinforceBackPack = "Reinforce backpack",
+    Recipe_ReinforceSewingKit = "Reinforce sewing kit",
+    Recipe_ReinforceFirstAidKit = "Reinforce first aid kit",
+}

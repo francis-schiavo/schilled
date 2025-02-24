@@ -1,0 +1,95 @@
+module SchilledMechanic {
+  import {
+    Base
+  }
+
+  fixing Fix Car Battery
+  {
+    Require: CarBattery1;CarBattery2;CarBattery3,
+
+    ConditionModifier: 10,
+
+    Fixer: ElectronicsScrap=10;Electricity=5;Mechanics=8,
+  }
+
+  fixing Fix Suspension Welding
+  {
+    Require: NormalSuspension1;NormalSuspension2;NormalSuspension3;ModernSuspension1;ModernSuspension2;ModernSuspension3;leafSuspension2,
+
+    GlobalItem: BlowTorch=3,
+    ConditionModifier: 10,
+
+    Fixer: MetalPipe=2;MetalWelding=3;Mechanics=3,
+    Fixer: MetalBar=2;MetalWelding=3;Mechanics=3,
+  }
+
+  fixing Fix Brake Welding
+  {
+    Require: OldBrake1;OldBrake2;OldBrake3;NormalBrake1;NormalBrake2;NormalBrake3;ModernBrake1;ModernBrake2;ModernBrake3,
+
+    GlobalItem: BlowTorch=2,
+    ConditionModifier: 10,
+
+    Fixer: MetalBar=2;MetalWelding=4;Mechanics=5,
+    Fixer: MetalPipe=2;MetalWelding=4;Mechanics=5,
+  }
+
+  fixing Fix Muffler Welding
+  {
+    Require : OldCarMuffler1;OldCarMuffler2;OldCarMuffler3;NormalCarMuffler1;NormalCarMuffler2;NormalCarMuffler3;ModernCarMuffler1;ModernCarMuffler2;ModernCarMuffler3,
+
+    GlobalItem: BlowTorch=3,
+    ConditionModifier: 10,
+
+    Fixer: SmallSheetMetal=2;MetalWelding=3;Mechanics=3,
+  }
+
+  fixing Fix Car Tires
+  {
+    Require: OldTire1;OldTire2;OldTire3;NormalTire1;NormalTire2;NormalTire3;ModernTire1;ModernTire2;ModernTire3,
+
+    ConditionModifier: 1.0,
+
+    Fixer: Glue=5;Mechanics=8,
+  }
+
+  fixing Fix Window
+  {
+    Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3,
+
+    GlobalItem: Screws=5,
+    ConditionModifier: 10,
+
+    Fixer : SheetMetal;Mechanics=5,
+    Fixer : SmallSheetMetal=2;Mechanics=5,
+  }
+
+  fixing Fix Window with cloth
+  {
+    Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3,
+    ConditionModifier : 1.5,
+
+    Fixer : Sheet=2;Mechanics=2,
+    Fixer : RippedSheets=3;Mechanics=2,
+  }
+
+  fixing Fix Light
+  {
+    Require: LightBulb,
+
+    ConditionModifier: 10,
+
+    Fixer: ElectronicsScrap=10;Electricity=5;Mechanics=5,
+    Fixer: ElectricWire=5;Electricity=5;Mechanics=5,
+  }
+
+  fixing Fix Radio
+  {
+    Require: RadioBlack;RadioRed;RadioMakeShift;HamRadio1;HamRadio2;HamRadioMakeShift,
+
+    ConditionModifier: 10,
+
+    Fixer: ElectronicsScrap=10;Electricity=5;Mechanics=5,
+    Fixer: ElectricWire=5;Electricity=5;Mechanics=5,
+  }
+}

@@ -1,0 +1,54 @@
+module Base {
+  item BlowTorch
+  {
+    DisplayCategory = Tool,
+    Weight = 1.0,
+    Type = Drainable,
+    UseWhileEquipped = FALSE,
+    UseDelta = 0.005,
+    DisplayName = Propane Torch,
+    Icon = BlowTorch,
+    MetalValue = 20,
+    KeepOnDeplete = true,
+    StaticModel = BlowTorch,
+    WeightEmpty = 0.3,
+    WorldStaticModel = BlowtorchGround,
+    cantBeConsolided = TRUE,
+  }
+
+  item Lighter
+  {
+    DisplayCategory = LightSource,
+    LightDistance = 2,
+    Weight = 0.1,
+    Type = Drainable,
+    UseWhileEquipped = TRUE,
+    TorchCone = FALSE,
+    LightStrength = 0.4,
+    DisplayName = Lighter,
+    ActivatedItem = TRUE,
+    Icon = Lighter,
+    MetalValue = 1,
+    ConsolidateOption = ContextMenu_Merge,
+    StaticModel = Zippo,
+    WorldStaticModel = ZippoGround,
+    ticksPerEquipUse = 110,
+    Tags = StartFire;Lighter,
+  }
+
+  item PropaneTank
+  {
+    DisplayCategory = Material,
+    Weight = 10.0,
+    Type = Drainable,
+    UseWhileEquipped = FALSE,
+    UseDelta = 0.0625,
+    DisplayName = Propane Tank,
+    Icon = PropaneTank,
+    UseWorldItem = TRUE,
+    ScaleWorldIcon = 2.0,
+    WeightEmpty = 5.0,
+    WorldStaticModel = PropaneTank,
+    ConsolidateOption = ContextMenu_Merge,
+  }
+}

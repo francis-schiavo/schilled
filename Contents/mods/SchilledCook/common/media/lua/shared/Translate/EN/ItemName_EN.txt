@@ -1,0 +1,6 @@
+ItemName_EN = {
+  ItemName_SchilledCook.PotOfHomeMadeGlue = "Homemade glue",
+  ItemName_SchilledCook.ForgedPotOfHomeMadeGlue = "Homemade glue",
+  ItemName_SchilledCook.PotOfHomeMadeGlueRaw = "Uncooked homemade glue",
+  ItemName_SchilledCook.ForgedPotOfHomeMadeGlueRaw = "Uncooked homemade glue",
+}

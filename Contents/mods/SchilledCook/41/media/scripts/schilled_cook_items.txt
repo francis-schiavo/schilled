@@ -1,0 +1,245 @@
+module SchilledCook {
+  import {
+    Base
+  }
+
+  model CanClosedTomatoHome {
+    mesh = CanClosed,
+    texture = TinCanTomatoHome,
+  }
+
+  item CannedTomatoHomeMade
+  {
+    DisplayName = Canned Tomato (Homemade),
+    DisplayCategory = Food,
+    Type = Food,
+    Weight = 0.8,
+    Icon = CannedTomato,
+    CannedFood = TRUE,
+    CantEat = TRUE,
+    Packaged = TRUE,
+    Calories = 90,
+    Carbohydrates = 18,
+    Lipids = 0,
+    Proteins = 1,
+    StaticModel = CanClosed,
+    WorldStaticModel = CanClosedTomatoHome,
+    Tags = HasMetal,
+  }
+
+  model CanClosedPotatoHome {
+    mesh = CanClosed,
+    texture = TinCanPotatoHome,
+  }
+
+  item CannedPotatoHomeMade
+  {
+    DisplayName = Canned Potato (Homemade),
+    DisplayCategory = Food,
+    Type = Food,
+    Weight = 0.8,
+    Icon = CannedPotato,
+    CannedFood = TRUE,
+    CantEat = TRUE,
+    Packaged = TRUE,
+    Calories = 175,
+    Carbohydrates = 15,
+    Lipids = 0,
+    Proteins = 2.5,
+    StaticModel = CanClosed,
+    WorldStaticModel = CanClosedPotatoHome,
+    Tags = HasMetal,
+  }
+
+  model CanClosedCarrotsHome {
+    mesh = CanClosed,
+    texture = TinCanCarrotsHome,
+  }
+
+  item CannedCarrotsHomeMade
+  {
+    DisplayName = Canned Carrots (Homemade),
+    DisplayCategory = Food,
+    Type = Food,
+    Weight = 0.8,
+    Icon = CannedCarrots,
+    CannedFood = TRUE,
+    CantEat = TRUE,
+    Packaged = TRUE,
+    Calories = 10.5,
+    Carbohydrates = 28,
+    Lipids = 0,
+    Proteins = 0,
+    StaticModel = CanClosed,
+    WorldStaticModel = CanClosedCarrotsHome,
+    Tags = HasMetal,
+  }
+
+  item ImprovisedLid
+  {
+    DisplayName = Improvised can lid,
+    DisplayCategory = Material,
+    Type = Normal,
+    Weight = 0.05,
+    Icon = RicePaper,
+    WorldStaticModel = RicePaper_Ground,
+  }
+
+  item TomatoPasteHomeMade
+	{
+		DisplayName = Tomato Paste (Homemade),
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.2,
+		Icon = TomatoPaste,
+		CantBeFrozen = TRUE,
+		EvolvedRecipe = Pizza:1;Soup:1;Stew:1;Omelette:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Stir fry:1;Stir fry Griddle Pan:1;Pie:1;Salad:1;Roasted Vegetables:1;Sandwich:1;Sandwich Baguette:1,
+		Packaged = TRUE,
+		Spice = true,
+		HungerChange = -15,
+		UnhappyChange = 20,
+		Calories = 120,
+		Carbohydrates = 12,
+		Lipids = 8,
+		Proteins = 0,
+		FoodType = NoExplicit,
+		EvolvedRecipeName = Tomato,
+    WorldStaticModel = TomatoPaste_Ground,
+		Tags = PizzaSauce,
+	}
+
+  item SugarCarrot
+  {
+    DisplayName = Carrot Sugar,
+    DisplayCategory = Food,
+    Type = Food,
+    Weight = 0.6,
+    Icon = Sugar,
+    EvolvedRecipe = HotDrink:1;HotDrinkRed:1;HotDrinkWhite:1;HotDrinkSpiffo:1;HotDrinkTea:1;Toast:1;Oatmeal:1;Beverage:1;Beverage2:1,
+    Spice = true,
+    UseDelta = 0.1,
+    UseWhileEquipped = FALSE,
+    HungerChange = -10,
+    Calories = 187,
+    Carbohydrates = 100,
+    Lipids = 0,
+    Proteins = 0,
+    WorldStaticModel = Sugar,
+    Tags = Sugar,
+    FoodType = Sugar,
+  }
+
+  item VinegarTomato
+  {
+    DisplayName = Tomato Vinegar,
+    DisplayCategory = Food,
+    Type = Food,
+    Weight = 0.1,
+    Icon = Vinegar,
+    EvolvedRecipe = Pizza:1;Soup:1;Stew:1;Omelette:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Stir fry:1;Stir fry Griddle Pan:1;Pie:1;Salad:1;Roasted Vegetables:1;Sandwich:1;Sandwich Baguette:1,
+    Spice = true,
+    UseDelta = 0.1,
+    UseWhileEquipped = FALSE,
+    HungerChange = -20,
+    Calories = 10,
+    Carbohydrates = 0,
+    Lipids = 0,
+    Proteins = 0,
+    WorldStaticModel = Vinegar,
+    Tags = Vinegar,
+    FoodType = Vinegar,
+  }
+
+  item HomeMadeGlue
+  {
+    DisplayName = Homemade glue,
+    DisplayCategory = Material,
+    Type = Drainable,
+    UseDelta = 0.25,
+    Weight = 1.0,
+    Icon	=	Pot,
+    StaticModel = CookingPot,
+    WorldStaticModel = CookingPotSoup_Ground,
+    Tooltip = Tooltip_FixItems,
+    Tags = Glue,
+    ConsolidateOption = ContextMenu_Merge,
+    ReplaceOnUse=Base.Pot,
+    ReplaceOnDeplete=Base.Pot,
+  }
+
+  item HomeMadeGlueRaw
+  {
+    DisplayName = Raw homemade glue,
+    DisplayCategory = Material,
+    Type = Food,
+    PoisonPower = 120,
+    UnhappyChange = 99,
+    CustomContextMenu = Drink,
+    Weight = 1.0,
+    Icon	=	Pot,
+    StaticModel = CookingPot,
+    WorldStaticModel = CookingPotSoup_Ground,
+    ReplaceOnUse = HomeMadeGlue,
+    IsCookable=true,
+    MinutesToCook=20,
+    MinutesToBurn=50,
+    DaysFresh = 160,
+    DaysTotallyRotten = 420,
+    ReplaceOnCooked=SchilledCook.HomeMadeGlue,
+  }
+
+  item EmptyJarWithLid
+  {
+    DisplayCategory=Cooking,
+    Type=Normal,
+    DisplayName=Empty Jar with Lid,
+    Icon=JarEmpty2,
+    Weight=0.2,
+    SurvivalGear=TRUE,
+    WorldStaticModel=EmptyJar,
+  }
+
+  item RadishSpice
+  {
+    DisplayCategory = Food,
+    Type = Food,
+    DisplayName = Radish condiment,
+    Icon = JarBrown,
+    Weight = 0.5,
+    CantBeFrozen = TRUE,
+    EvolvedRecipe = Pizza:1;Soup:1;Stew:1;Omelette:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Stir fry:1;Stir fry Griddle Pan:1;Pie:1;Salad:1;Roasted Vegetables:1;Sandwich:1;Sandwich Baguette:1,
+    StaticModel = CanClosed,
+    WorldStaticModel = JarFoodRadish_Ground,
+    Spice = true,
+    HungerChange = -20,
+    UnhappyChange = 25,
+    Calories = 10,
+    Carbohydrates = 5,
+    Lipids = 5,
+    Proteins = 0,
+    FoodType = NoExplicit,
+    EvolvedRecipeName = Radish,
+    ReplaceOnUse = EmptyJarWithLid,
+  }
+
+  item HomemadeKetchup
+  {
+    DisplayName = Ketchup (Home made),
+    DisplayCategory = Food,
+    Type = Food,
+    Weight = 0.2,
+    Icon = Ketchup,
+    CantBeFrozen = TRUE,
+    EvolvedRecipe = Pizza:1;Soup:1;Stew:1;Omelette:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Stir fry:1;Stir fry Griddle Pan:1;Pie:1;Salad:1;Roasted Vegetables:1;Sandwich:1;Sandwich Baguette:1,
+    Packaged = TRUE,
+    Spice = true,
+    HungerChange = -20,
+    UnhappyChange = 30,
+    Calories = 1480,
+    Carbohydrates = 370,
+    Lipids = 0,
+    Proteins = 0,
+    WorldStaticModel = Ketchup,
+    FoodType = NoExplicit,
+  }
+}

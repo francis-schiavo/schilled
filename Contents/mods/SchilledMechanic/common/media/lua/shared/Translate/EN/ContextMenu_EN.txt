@@ -1,0 +1,5 @@
+ContextMenu_PTBR = {
+	ContextMenu_RecycleVehicle = "Recycle vehicle",
+  ContextMenu_RepairLightbar = "Repair lightbar",
+  ContextMenu_RepairHeater = "Repair heater",
+} 

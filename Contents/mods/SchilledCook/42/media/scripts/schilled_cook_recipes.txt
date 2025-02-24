@@ -1,0 +1,45 @@
+module SchilledCook {
+  import {
+    Base
+  }
+
+  craftRecipe CreateHomeMadeGlue {
+    timedAction = MixingBowl,
+		Time = 50,
+		OnCreate = Recipe.OnCreate.AddBaseIngredientToCookingVessel,
+		Tags = AnySurfaceCraft;Cooking,
+		category = Cooking,
+		xpAward = Cooking:20,
+
+    inputs {
+      item 1 [Base.Pot;Base.PotForged] mode:destroy flags[InheritCondition;FullOfWater;ItemCount] mappers[potType],
+      item 1 [Base.BakingSoda],
+      item 1 [Base.Salt],
+      item 1 tags[Flour],
+      item 1 tags[Vinegar],
+    }
+    outputs {
+      item 1 mapper:potType,
+    }
+    itemMapper potType
+    {
+      SchilledCook.PotOfHomeMadeGlueRaw = Base.Pot,
+      SchilledCook.ForgedPotOfHomeMadeGlueRaw = Base.PotForged,
+    }
+  }
+
+  craftRecipe RefillGlueBottle {
+    timedAction = Making,
+		Time = 50,
+		Tags = AnySurfaceCraft;Cooking,
+    category = Cooking,
+		inputs
+		{
+			item 1 [SchilledCook.PotOfHomeMadeGlue;SchilledCook.ForgedPotOfHomeMadeGlue],
+		}
+		outputs
+		{
+			item 25 Base.Glue,
+		}
+  }
+}

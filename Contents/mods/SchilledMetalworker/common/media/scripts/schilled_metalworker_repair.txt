@@ -1,0 +1,25 @@
+module SchilledMetalworker {
+  import {
+    Base
+  }
+
+  fixing Repair metal weapons {
+    Require: Machete;Katana;Crowbar;ReinforcedMachete,
+
+    GlobalItem: BlowTorch=2,
+    ConditionModifier: 10,
+
+    Fixer: MetalBar=1;MetalWelding=5,
+    Fixer: MetalPipe=1;MetalWelding=5,
+  }
+
+  fixing Repair Super Machete {
+    Require: SuperMachete,
+
+    GlobalItem: BlowTorch=2,
+    ConditionModifier: 10,
+
+    Fixer: MetalBar=3;MetalWelding=8,
+    Fixer: MetalPipe=3;MetalWelding=8,
+  }
+}

@@ -1,0 +1,6 @@
+ItemName_PTBR = {
+  ItemName_SchilledCook.PotOfHomeMadeGlue = "Cola caseira",
+  ItemName_SchilledCook.ForgedPotOfHomeMadeGlue = "Cola caseira",
+  ItemName_SchilledCook.PotOfHomeMadeGlueRaw = "Cola caseira crua",
+  ItemName_SchilledCook.ForgedPotOfHomeMadeGlueRaw = "Cola caseira crua",
+}

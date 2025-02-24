@@ -1,0 +1,97 @@
+module Base {
+  item PaintRed
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintBlack
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintBlue
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintBrown
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintCyan
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintGreen
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintGrey
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintLightBlue
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintLightBrown
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintOrange
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintPink
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintPurple
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintTurquoise
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintWhite
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item PaintYellow
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+
+  item BucketPlasterFull
+  {
+    Override=TRUE,
+    UseDelta=0.01,
+  }
+}
