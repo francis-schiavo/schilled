@@ -19,7 +19,7 @@ function ISWashYourself:getDuration()
     if self.character:isTimedActionInstant() then
         return 1;
     end
-    local waterUnits = math.min(ISWashYourself.GetRequiredWater(self.character), self.sink:getWaterAmount());
+    local waterUnits = math.min(ISWashYourself.GetRequiredWater(self.character), self.sink:getFluidAmount());
     if not self.useSoap then
         return waterUnits * 55;
     else
