@@ -1,0 +1,5 @@
+ContextMenu_PTBR = {
+    ContextMenu_ClaimVehicle = "Claim vehicle",
+    ContextMenu_UnclaimVehicle = "Unclaim vehicle",
+    ContextMenu_VehicleClaimed = "Vehicle claimed",
+}

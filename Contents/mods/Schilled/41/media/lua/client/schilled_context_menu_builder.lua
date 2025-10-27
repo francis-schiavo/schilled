@@ -1,15 +1,23 @@
 ContextMenuBuilder = {}
 
 function ContextMenuBuilder:Red()
-    return " <RGB:1,0,0>"
+    return "<RGB:1,0,0>"
 end
 
 function ContextMenuBuilder:Green()
-    return " <RGB:0,1,0>"
+    return "<RGB:0,1,0>"
 end
 
 function ContextMenuBuilder:White()
-    return " <RGB:1,1,1>"
+    return "<RGB:1,1,1>"
+end
+
+function ContextMenuBuilder:CreateTooltip(i18n_key, color)
+    local tooltip = ISToolTip:new()
+    tooltip:initialise()
+    tooltip:setVisible(false)
+    tooltip.description = color .. getText(i18n_key) .. " <LINE>"
+    return tooltip
 end
 
 function ContextMenuBuilder:CreateMenuTooltip(player, requiredItems, requiredSkills)
@@ -27,7 +35,7 @@ function ContextMenuBuilder:CreateMenuTooltip(player, requiredItems, requiredSki
             rgb = self:Red()
             available = false
         end
-        tooltip.description = tooltip.description .. rgb .. perkName .. " " .. perkLevel .. "/" .. requiredLevel .. " <LINE>"
+        tooltip.description = tooltip.description .. " " .. rgb .. perkName .. " " .. perkLevel .. "/" .. requiredLevel .. " <LINE>"
     end
 
     for requiredItem, requiredAmount in pairs(requiredItems) do
