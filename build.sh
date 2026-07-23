@@ -15,7 +15,7 @@ rm -rf "$WORKSHOP_DIR/Schilled"
 mkdir "$WORKSHOP_DIR/Schilled"
 
 # Copy the files to the build directory
-if [ $BUILD == "41" ]; then
+if [ "$BUILD" == "41" ]; then
   echo "Building for 41"
   for mod_dir in ./Contents/mods/*/; do
     mod_name=$(basename "$mod_dir")

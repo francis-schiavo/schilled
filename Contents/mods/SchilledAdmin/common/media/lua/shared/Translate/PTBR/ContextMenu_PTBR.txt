@@ -1,5 +1,0 @@
-ContextMenu_PTBR = {
-    ContextMenu_ClaimVehicle = "Obter veículo",
-    ContextMenu_UnclaimVehicle = "Abandonar veículo",
-    ContextMenu_VehicleClaimed = "Veículo possui dono",
-} 

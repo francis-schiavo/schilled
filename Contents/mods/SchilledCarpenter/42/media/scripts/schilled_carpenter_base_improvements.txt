@@ -1,35 +1,30 @@
 module Base {
-  item Log
-	{
-	  Override=TRUE,
-		Weight = 5,
-	}
-
-  item LogStacks2
-	{
-		Override=TRUE,
-		Weight = 4,
-	}
-
-	item LogStacks3
-	{
-		Override=TRUE,
-		Weight = 7,
-	}
-
-	item LogStacks4
-	{
-	  Override=TRUE,
-		Weight = 9,
-	}
-
-	craftRecipe SawLogs
-  {
-    Override:true,
-    Time = 120,
-    outputs
+    item Log
     {
-      item 1 Base.Plank,
+        Weight = 5,
     }
-  }
+
+    item LogStacks2
+    {
+        Weight = 4,
+    }
+
+    item LogStacks3
+    {
+        Weight = 7,
+    }
+
+    item LogStacks4
+    {
+        Weight = 9,
+    }
+
+    craftRecipe SawLogs
+    {
+        Time = 120,
+        outputs
+        {
+            item 1 Base.Plank,
+        }
+    }
 }

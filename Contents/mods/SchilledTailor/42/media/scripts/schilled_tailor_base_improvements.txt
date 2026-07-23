@@ -1,7 +1,6 @@
 module Base {
   craftRecipe RipClothing
   {
-    Override:true,
     AllowBatchCraft = True,
     xpAward = Tailoring:2,
     Time = 10,
@@ -9,7 +8,6 @@ module Base {
 
   craftRecipe RipWornClothing
   {
-    Override:true,
     AllowBatchCraft = True,
     xpAward = Tailoring:2,
     Time = 10,
@@ -17,7 +15,6 @@ module Base {
 
   craftRecipe RipDenimClothing
   {
-    Override:true,
     AllowBatchCraft = True,
     xpAward = Tailoring:2,
     Time = 20,
@@ -25,7 +22,6 @@ module Base {
 
   craftRecipe RipWornDenimClothing
   {
-    Override:true,
     AllowBatchCraft = True,
     xpAward = Tailoring:2,
     Time = 30,
@@ -33,7 +29,6 @@ module Base {
 
   craftRecipe RipSheets
   {
-    Override:true,
     AllowBatchCraft = True,
     xpAward = Tailoring:2,
     Time = 10,

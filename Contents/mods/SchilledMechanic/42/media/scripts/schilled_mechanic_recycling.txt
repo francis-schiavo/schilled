@@ -9,7 +9,7 @@ module SchilledMechanic {
     Category = Recycling,
     tags = InHandCraft,
     SkillRequired = Tailoring:4,
-    OnCreate = Recipe.OnCreate.RecycleCarSeats,
+    OnCreate = SchilledMechanic.OnCreate.RecycleCarSeats,
 
     inputs {
       item 1 tags[Scissors;SharpKnife] mode:keep flags[MayDegradeLight;Prop1;IsNotDull],
@@ -26,7 +26,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = Electricity:3,
-    OnCreate = Recipe.OnCreate.RecycleElectronics,
+    OnCreate = SchilledMechanic.OnCreate.RecycleElectronics,
 
     inputs {
       item 1 [Base.CarBattery1;Base.CarBattery2;Base.CarBattery3] mode:destroy flags[Prop2],
@@ -43,7 +43,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalPipePart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalPipePart,
 
     inputs {
       item 1 [Base.NormalSuspension1;Base.NormalSuspension2;Base.NormalSuspension3;ModernSuspension1;ModernSuspension2;ModernSuspension3] flags[Prop2],
@@ -61,7 +61,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalPipePart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalPipePart,
 
     inputs {
       item 1 [Base.OldBrake1;Base.OldBrake2;Base.OldBrake3;Base.NormalBrake1;Base.NormalBrake2;Base.NormalBrake3;Base.ModernBrake1;Base.ModernBrake2;Base.ModernBrake3] flags[Prop2],
@@ -79,7 +79,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleSmallMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleSmallMetalSheetPart,
 
     inputs {
       item 1 [Base.OldCarMuffler1;Base.OldCarMuffler2;Base.OldCarMuffler3;Base.NormalCarMuffler1;Base.NormalCarMuffler2;Base.NormalCarMuffler3;Base.ModernCarMuffler1;Base.ModernCarMuffler2;Base.ModernCarMuffler3] flags[Prop2],
@@ -97,7 +97,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleSmallMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleSmallMetalSheetPart,
 
     inputs {
       item 1 [Base.SmallGasTank1;Base.NormalGasTank1;Base.BigGasTank1;Base.SmallGasTank2;Base.NormalGasTank2;Base.BigGasTank2;Base.SmallGasTank3;Base.NormalGasTank3;Base.BigGasTank3] mode:destroy flags[Prop2],
@@ -115,7 +115,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalSheetPart,
 
     inputs {
       item 1 [Base.FrontCarDoor1;Base.FrontCarDoor2;Base.FrontCarDoor3;Base.RearCarDoor1;Base.RearCarDoor2;Base.RearCarDoor3] flags[Prop2],
@@ -133,7 +133,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalSheetPart,
 
     inputs {
       item 1 [Base.EngineDoor1;Base.EngineDoor2;Base.EngineDoor3] flags[Prop2],
@@ -151,7 +151,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalSheetPart,
 
     inputs {
       item 1 [Base.TrunkDoor1;Base.TrunkDoor2;Base.TrunkDoor3] flags[Prop2],
@@ -169,7 +169,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalSheetPart,
 
     inputs {
       item 1 [Base.TrailerTrunk1;Base.TrailerTrunk2;Base.TrailerTrunk3] flags[Prop2],
@@ -187,7 +187,7 @@ module SchilledMechanic {
     tags = InHandCraft;CanBeDoneFromFloor,
     Category = Recycling,
     SkillRequired = MetalWelding:5,
-    OnCreate = Recipe.OnCreate.RecycleMetalSheetPart,
+    OnCreate = SchilledMechanic.OnCreate.RecycleMetalSheetPart,
 
     inputs {
       item 1 [Base.SmallTrunk1;Base.NormalTrunk1;Base.BigTrunk1;Base.SmallTrunk2;Base.NormalTrunk2;Base.BigTrunk2;Base.SmallTrunk3;Base.NormalTrunk3;Base.BigTrunk3;Base.VanSeatsTrunk2] flags[Prop2],

@@ -43,3 +43,11 @@ function ContextMenuBuilder:CreateMenuTooltip(player, requiredItems, requiredSki
 
     return tooltip, not available
 end
+
+function ContextMenuBuilder:CreateTooltip(translationKey, color)
+    local tooltip = ISToolTip:new()
+    tooltip:initialise()
+    tooltip:setVisible(false)
+    tooltip.description = color .. getText(translationKey)
+    return tooltip
+end

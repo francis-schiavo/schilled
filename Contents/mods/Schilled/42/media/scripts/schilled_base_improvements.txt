@@ -1,9 +1,8 @@
 module Base {
-  item Soap2
-  {
-    Override=True,
-    UseDelta=0.05,
-    Weight=0.1,
-    ConsolidateOption = ContextMenu_Merge,
-  }
+    item Soap2
+    {
+        UseDelta=0.05,
+        Weight=0.1,
+        ConsolidateOption = ContextMenu_Merge,
+    }
 }

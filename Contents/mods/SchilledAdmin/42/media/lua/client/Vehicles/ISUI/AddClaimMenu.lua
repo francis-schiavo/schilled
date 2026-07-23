@@ -1,0 +1,106 @@
+require "Vehicles/ISUI/ISVehicleMechanics"
+
+function string:startsWith(start)
+    return self:sub(1, #start) == start
+end
+
+local originalContextMenu = ISVehicleMenu.FillMenuOutsideVehicle
+
+function ISVehicleMenu.onClaim(player, vehicle, debug)
+    if luautils.walkAdj(player, vehicle:getSquare()) then
+        ISTimedActionQueue.add(SchilledClaimVehicle:new(player, vehicle, true, debug))
+    end
+end
+
+function ISVehicleMenu.onUnclaim(player, vehicle, debug)
+    if luautils.walkAdj(player, vehicle:getSquare()) then
+        ISTimedActionQueue.add(SchilledClaimVehicle:new(player, vehicle, false, debug))
+    end
+end
+
+function verifyOwnership(playerObj, vehicle)
+    local owners = vehicle:getModData().claimedBy or {}
+    local hasOwner = false
+    for _, _ in pairs(owners) do
+        hasOwner = true
+        break
+    end
+    local ownedByPlayer = owners[playerObj:getUsername()] ~= nil
+
+    return hasOwner, ownedByPlayer
+end
+
+function ISVehicleMenu.FillMenuOutsideVehicle(player, context, vehicle, test)
+    local playerObj = getSpecificPlayer(player);
+
+    local cheat = getCore():getDebug() and getDebugOptions():getBoolean("Cheat.Vehicle.MechanicsAnywhere");
+    if ISVehicleMechanics.cheat or (isClient() and isAdmin()) or cheat then
+        context:addOption(ContextMenuBuilder:Red() .. getText("ClaimVehicle"), playerObj, ISVehicleMenu.onClaim, vehicle, true);
+        context:addOption(ContextMenuBuilder:Red() .. getText("UnclaimVehicle"), playerObj, ISVehicleMenu.onUnclaim, vehicle, true);
+    end
+
+    local hasOwner, ownedByPlayer = verifyOwnership(playerObj, vehicle);
+
+    if hasOwner and not ownedByPlayer then
+        local claimed = context:addOption(getText("VehicleClaimed"), playerObj, ISVehicleMenu.onUnclaim, vehicle)
+        claimed.notAvailable = true
+    elseif ownedByPlayer then
+        context:addOption(getText("UnclaimVehicle"), playerObj, ISVehicleMenu.onUnclaim, vehicle)
+    else
+        local claimOption = context:addOption(getText("ClaimVehicle"), playerObj, ISVehicleMenu.onClaim, vehicle)
+        if not playerObj:getInventory():haveThisKeyId(vehicle:getKeyId()) then
+            claimOption.toolTip = ContextMenuBuilder:CreateTooltip("Tooltip_ClaimVehicleNoKey", ContextMenuBuilder:Red())
+            claimOption.notAvailable = true
+        end
+    end
+
+    originalContextMenu(player, context, vehicle, test);
+end
+
+function patchMenuEvents(...)
+    for _, eventName in ipairs{...} do
+        local originalEvent = ISVehicleMenu[eventName]
+        ISVehicleMenu[eventName] = function(playerObj, vehicleOrPart, ...)
+            local vehicle = vehicleOrPart
+            if vehicleOrPart["getVehicle"] then
+                vehicle = vehicle:getVehicle()
+            end
+
+            local hasOwner, ownedByPlayer = verifyOwnership(playerObj, vehicle)
+            if hasOwner and not ownedByPlayer then
+                playerObj:Say(getText("IGUI_Vehicle_OwnedByAnother"))
+                return
+            end
+            originalEvent(playerObj, vehicleOrPart, ...)
+        end
+    end
+end
+
+function patchPartEvents(...)
+    for _, eventName in ipairs{...} do
+        local originalEvent = ISVehiclePartMenu[eventName]
+        ISVehiclePartMenu[eventName] = function(playerObj, part, ...)
+            local vehicle = part:getVehicle()
+            local hasOwner, ownedByPlayer = verifyOwnership(playerObj, vehicle)
+            if hasOwner and not ownedByPlayer then
+                playerObj:Say(getText("IGUI_Vehicle_OwnedByAnother"))
+                return
+            end
+            originalEvent(playerObj, part, ...)
+        end
+    end
+end
+
+patchMenuEvents("onEnter", "onMechanic", "onOpenDoor")
+patchPartEvents("onSmashWindow", "onUnlockDoor", "onTakeGasoline")
+
+local originalOnTakeFuelNew = ISVehiclePartMenu.onTakeFuelNew
+ISVehiclePartMenu.onTakeFuelNew = function(worldobjects, part, fuelContainerList, fuelContainer, player)
+    local playerObj = getSpecificPlayer(player)
+    local hasOwner, ownedByPlayer = verifyOwnership(playerObj, part:getVehicle())
+    if hasOwner and not ownedByPlayer then
+        playerObj:Say(getText("IGUI_Vehicle_OwnedByAnother"))
+        return
+    end
+    originalOnTakeFuelNew(worldobjects, part, fuelContainerList, fuelContainer, player)
+end
