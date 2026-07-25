@@ -51,10 +51,7 @@ function ISVehicleMechanics:doPartContextMenu(part, x, y)
 
     originalContextMenu(self, part, x, y)
 
-    if partId == "lightbar" then
-        self.context:removeOptionByName(getText("ContextMenu_Repair"))
-        self:CustomRepairMenu(part, "ContextMenu_RepairLightbar", { ["Base.LightBulb"] = 2, ["Base.Amplifier"] = 1 }, { ["Mechanics"] = 8, ["Electricity"] = 4 })
-    elseif partId == "Heater" then
+    if partId == "Heater" then
         self:CustomRepairMenu(part, "ContextMenu_RepairHeater", { ["Base.ScrapMetal"] = 10, ["Base.ElectronicsScrap"] = 5 }, { ["Mechanics"] = 10, ["Electricity"] = 4 })
     else
         local item = part:getInventoryItem()

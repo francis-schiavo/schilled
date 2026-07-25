@@ -10,5 +10,8 @@
     "RecycleHood": "Recycle hood",
     "RecycleTrunk": "Recycle trunk",
     "TrailerTrunk": "Recycle trailer trunk",
-    "RecycleTrunkDoor": "Recycle trunk door"
+    "RecycleTrunkDoor": "Recycle trunk door",
+    "RecycleGloveBox": "Recycle glove box",
+    "RecycleLightBar": "Recycle light bar",
+    "RecycleLightBar2": "Recycle light bar"
 }

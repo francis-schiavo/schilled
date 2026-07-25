@@ -132,3 +132,11 @@ end
 function SchilledMechanic:GetRecycleEngineYield(condition)
     return { ["Base.EngineParts"] = self:GetYield(condition, 1, 13) }, { [Perks.MetalWelding] = 10, [Perks.Mechanics] = 10 }
 end
+
+function SchilledMechanic:GetRecycleWoodenYield(player)
+    local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Woodwork, Perks.Mechanics })
+    return {
+        ["Base.Screws"] = self:GetYield(percentage, 1, 4),
+        ["Base.Base.Plank"] = self:GetYield(percentage, 0, 1)
+    }, { [Perks.Woodwork] = 10, [Perks.Mechanics] = 10 }
+end

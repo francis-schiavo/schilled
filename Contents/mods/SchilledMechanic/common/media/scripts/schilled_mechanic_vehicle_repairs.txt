@@ -1,95 +1,123 @@
 module SchilledMechanic {
-  import {
-    Base
-  }
+    import {
+        Base
+    }
 
-  fixing Fix Car Battery
-  {
-    Require: CarBattery1;CarBattery2;CarBattery3,
+    fixing Fix Car Battery
+    {
+        Require = Base.CarBattery1;Base.CarBattery2;Base.CarBattery3,
 
-    ConditionModifier: 10,
+        ConditionModifier = 10,
 
-    Fixer: ElectronicsScrap=10;Electricity=5;Mechanics=8,
-  }
+        Fixer = ElectronicsScrap=10; Electricity=5; Mechanics=8,
+    }
 
-  fixing Fix Suspension Welding
-  {
-    Require: NormalSuspension1;NormalSuspension2;NormalSuspension3;ModernSuspension1;ModernSuspension2;ModernSuspension3;leafSuspension2,
+    fixing Fix Suspension Welding
+    {
+        Require = Base.NormalSuspension1;Base.NormalSuspension2;Base.NormalSuspension3;Base.ModernSuspension1;Base.ModernSuspension2;Base.ModernSuspension3;Base.leafSuspension2,
 
-    GlobalItem: BlowTorch=3,
-    ConditionModifier: 10,
+        GlobalItem = Base.BlowTorch=3,
+        ConditionModifier = 10,
 
-    Fixer: MetalPipe=2;MetalWelding=3;Mechanics=3,
-    Fixer: MetalBar=2;MetalWelding=3;Mechanics=3,
-  }
+        Fixer = MetalPipe=2; MetalWelding=3; Mechanics=3,
+        Fixer = MetalBar=2; MetalWelding=3; Mechanics=3,
+    }
 
-  fixing Fix Brake Welding
-  {
-    Require: OldBrake1;OldBrake2;OldBrake3;NormalBrake1;NormalBrake2;NormalBrake3;ModernBrake1;ModernBrake2;ModernBrake3,
+    fixing Fix Brake Welding
+    {
+        Require = Base.OldBrake1;Base.OldBrake2;Base.OldBrake3;Base.NormalBrake1;Base.NormalBrake2;Base.NormalBrake3;Base.ModernBrake1;Base.ModernBrake2;Base.ModernBrake3,
 
-    GlobalItem: BlowTorch=2,
-    ConditionModifier: 10,
+        GlobalItem = Base.BlowTorch=2,
+        ConditionModifier = 10,
 
-    Fixer: MetalBar=2;MetalWelding=4;Mechanics=5,
-    Fixer: MetalPipe=2;MetalWelding=4;Mechanics=5,
-  }
+        Fixer = MetalBar=2; MetalWelding=4; Mechanics=5,
+        Fixer = MetalPipe=2; MetalWelding=4; Mechanics=5,
+    }
 
-  fixing Fix Muffler Welding
-  {
-    Require : OldCarMuffler1;OldCarMuffler2;OldCarMuffler3;NormalCarMuffler1;NormalCarMuffler2;NormalCarMuffler3;ModernCarMuffler1;ModernCarMuffler2;ModernCarMuffler3,
+    fixing Fix Muffler Welding
+    {
+        Require = Base.OldCarMuffler1;Base.OldCarMuffler2;Base.OldCarMuffler3;Base.NormalCarMuffler1;Base.NormalCarMuffler2;Base.NormalCarMuffler3;Base.ModernCarMuffler1;Base.ModernCarMuffler2;Base.ModernCarMuffler3,
 
-    GlobalItem: BlowTorch=3,
-    ConditionModifier: 10,
+        GlobalItem = Base.BlowTorch=3,
+        ConditionModifier = 10,
 
-    Fixer: SmallSheetMetal=2;MetalWelding=3;Mechanics=3,
-  }
+        Fixer = SmallSheetMetal=2; MetalWelding=3; Mechanics=3,
+    }
 
-  fixing Fix Car Tires
-  {
-    Require: OldTire1;OldTire2;OldTire3;NormalTire1;NormalTire2;NormalTire3;ModernTire1;ModernTire2;ModernTire3,
+    fixing Fix Car Tires
+    {
+        Require = Base.OldTire1;Base.OldTire2;Base.OldTire3;Base.NormalTire1;Base.NormalTire2;Base.NormalTire3;Base.ModernTire1;Base.ModernTire2;Base.ModernTire3,
 
-    ConditionModifier: 1.0,
+        ConditionModifier = 10,
 
-    Fixer: Glue=5;Mechanics=8,
-  }
+        Fixer = Glue=5; Mechanics=8,
+    }
 
-  fixing Fix Window
-  {
-    Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3,
+    fixing Fix Window
+    {
+        Require = Base.FrontWindow1;Base.RearWindow1;Base.FrontWindow2;Base.RearWindow2;Base.FrontWindow3;Base.RearWindow3;Base.Windshield1;Base.RearWindshield1;Base.Windshield2;Base.RearWindshield2;Base.Windshield3;Base.RearWindshield3,
 
-    GlobalItem: Screws=5,
-    ConditionModifier: 10,
+        GlobalItem = Base.Screws=5,
+        ConditionModifier = 10,
 
-    Fixer : SheetMetal;Mechanics=5,
-    Fixer : SmallSheetMetal=2;Mechanics=5,
-  }
+        Fixer = SheetMetal; Mechanics=5,
+        Fixer = SmallSheetMetal=2; Mechanics=5,
+    }
 
-  fixing Fix Window with cloth
-  {
-    Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3,
-    ConditionModifier : 1.5,
+    fixing Fix Window with cloth
+    {
+        Require = Base.FrontWindow1;Base.RearWindow1;Base.FrontWindow2;Base.RearWindow2;Base.FrontWindow3;Base.RearWindow3;Base.Windshield1;Base.RearWindshield1;Base.Windshield2;Base.RearWindshield2;Base.Windshield3;Base.RearWindshield3,
+        ConditionModifier = 1.5,
 
-    Fixer : Sheet=2;Mechanics=2,
-    Fixer : RippedSheets=3;Mechanics=2,
-  }
+        Fixer = Sheet=2; Mechanics=2,
+        Fixer = RippedSheets=3; Mechanics=2,
+    }
 
-  fixing Fix Light
-  {
-    Require: LightBulb,
+    fixing Fix Light
+    {
+        Require = Base.LightBulb,
 
-    ConditionModifier: 10,
+        ConditionModifier = 10,
 
-    Fixer: ElectronicsScrap=10;Electricity=5;Mechanics=5,
-    Fixer: ElectricWire=5;Electricity=5;Mechanics=5,
-  }
+        Fixer = ElectronicsScrap=10; Electricity=5; Mechanics=5,
+        Fixer = ElectricWire=5; Electricity=5; Mechanics=5,
+    }
 
-  fixing Fix Radio
-  {
-    Require: RadioBlack;RadioRed;RadioMakeShift;HamRadio1;HamRadio2;HamRadioMakeShift,
+    fixing Fix Radio
+    {
+        Require = Base.RadioBlack;Base.RadioRed;Base.RadioMakeShift;Base.HamRadio1;Base.HamRadio2;Base.HamRadioMakeShift,
 
-    ConditionModifier: 10,
+        ConditionModifier = 10,
 
-    Fixer: ElectronicsScrap=10;Electricity=5;Mechanics=5,
-    Fixer: ElectricWire=5;Electricity=5;Mechanics=5,
-  }
+        Fixer = ElectronicsScrap=10; Electricity=5; Mechanics=5,
+        Fixer = ElectricWire=5; Electricity=5; Mechanics=5,
+    }
+
+    fixing Fix LightbarBlue
+    {
+        Require = Base.LightbarBlue,
+        ConditionModifier = 10,
+        Fixer = LightBulbBlue=2; Electricity=2,
+    }
+
+    fixing Fix LightbarRed
+    {
+        Require = Base.LightbarRed,
+        ConditionModifier = 10,
+        Fixer = LightBulbRed=2; Electricity=2,
+    }
+
+    fixing Fix LightbarYellow
+    {
+        Require = Base.LightbarYellow,
+        ConditionModifier = 10,
+        Fixer = LightBulbYellow=2; Electricity=2,
+    }
+
+    fixing Fix LightbarRedBlue
+    {
+        Require = Base.LightbarRedBlue,
+        ConditionModifier = 10,
+        Fixer = LightBulbBlue=1; Base.LightBulbRed=1; Electricity=2,
+    }
 }
