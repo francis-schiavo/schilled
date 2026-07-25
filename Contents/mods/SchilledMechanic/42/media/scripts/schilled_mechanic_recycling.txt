@@ -54,7 +54,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 2 Base.ScrapMetal,
+            item 2 Base.SteelPiece,
         }
     }
 
@@ -73,7 +73,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 2 Base.ScrapMetal,
+            item 2 Base.SteelPiece,
         }
     }
 
@@ -92,7 +92,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 3 Base.ScrapMetal,
+            item 3 Base.SteelChunk,
         }
     }
 
@@ -111,7 +111,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 3 Base.ScrapMetal,
+            item 3 Base.SteelChunk,
         }
     }
 
@@ -130,7 +130,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 6 Base.ScrapMetal,
+            item 6 Base.SteelChunk,
         }
     }
 
@@ -149,7 +149,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 6 Base.ScrapMetal,
+            item 6 Base.SteelChunk,
         }
     }
 
@@ -168,7 +168,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 6 Base.ScrapMetal,
+            item 6 Base.SteelChunk,
         }
     }
 
@@ -187,7 +187,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 6 Base.ScrapMetal,
+            item 6 Base.SteelChunk,
         }
     }
 
@@ -206,7 +206,7 @@ module SchilledMechanic {
             item 1 tags[base:weldingmask] mode:keep,
         }
         outputs {
-            item 6 Base.ScrapMetal,
+            item 6 Base.SteelChunk,
         }
     }
 

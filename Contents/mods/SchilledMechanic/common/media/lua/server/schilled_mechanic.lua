@@ -67,7 +67,7 @@ end
 
 function SchilledMechanic:GetRecycleMetalPipeYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
-    local yield = { ["Base.ScrapMetal"] = self:GetYield(percentage, 1, 5) }
+    local yield = { ["Base.SteelPiece"] = self:GetYield(percentage, 1, 5) }
 
     local random = ZombRand(2)
     if random == 0 then
@@ -80,7 +80,7 @@ end
 
 function SchilledMechanic:GetRecycleBigMetalPipeYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
-    local yield = { ["Base.ScrapMetal"] = self:GetYield(percentage, 1, 5) }
+    local yield = { ["Base.SteelPiece"] = self:GetYield(percentage, 1, 5) }
 
     local random = ZombRand(2)
     if random == 0 then
@@ -93,7 +93,7 @@ end
 
 function SchilledMechanic:GetRecycleMetalSheetYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
-    local yield = { ["Base.ScrapMetal"] = self:GetYield(percentage, 2, 7) }
+    local yield = { ["Base.SteelChunk"] = self:GetYield(percentage, 2, 7) }
 
     local random = ZombRand(2)
     if random == 0 then
@@ -107,14 +107,14 @@ end
 function SchilledMechanic:GetRecycleSmallMetalSheetYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
     return {
-        ["Base.ScrapMetal"] = self:GetYield(percentage, 1, 4),
+        ["Base.SteelChunk"] = self:GetYield(percentage, 1, 4),
         ["Base.SmallSheetMetal"] = self:GetYield(percentage, 0, 1)
     }, { [Perks.MetalWelding] = 10, [Perks.Mechanics] = 10 }
 end
 
 function SchilledMechanic:GetRecycleArmorYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
-    local yield = { ["Base.ScrapMetal"] = self:GetYield(percentage, 2, 7) }
+    local yield = { ["Base.SteelChunk"] = self:GetYield(percentage, 2, 7) }
 
     local random = ZombRand(4)
     if random == 0 then
@@ -137,6 +137,6 @@ function SchilledMechanic:GetRecycleWoodenYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Woodwork, Perks.Mechanics })
     return {
         ["Base.Screws"] = self:GetYield(percentage, 1, 4),
-        ["Base.Base.Plank"] = self:GetYield(percentage, 0, 1)
+        ["Base.Plank"] = self:GetYield(percentage, 0, 1)
     }, { [Perks.Woodwork] = 10, [Perks.Mechanics] = 10 }
 end

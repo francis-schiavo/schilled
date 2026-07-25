@@ -21,10 +21,10 @@ local enabledParts = {
     "Muffler",
     "Radio",
     "Windshield",
-    "lightbar",
+    "Lightbar",
     "Heater",
-    "M998Trunk",
-    "M101A3Trunk"
+    "M998",
+    "DAMN"
 }
 
 function enabledParts:contains(partId)
@@ -79,11 +79,11 @@ end
 local originalContextMenu2 = ISVehicleMenu.FillMenuOutsideVehicle
 
 local function predicateWeldingMask(item)
-    return item:hasTag("WeldingMask") or item:getType() == "WeldingMask"
+	return item:hasTag(ItemTag.WELDING_MASK) or item:getType() == "WeldingMask"
 end
 
 local function predicateBlowTorch(item)
-    return (item:hasTag("BlowTorch") or item:getType() == "BlowTorch") and item:getCurrentUses() >= 10
+	return (item:hasTag(ItemTag.BLOW_TORCH) or item:getType() == "BlowTorch") and item:getCurrentUses() >= 10
 end
 
 function ISVehicleMenu.onRecycle(player, vehicle)

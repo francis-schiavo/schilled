@@ -1,0 +1,98 @@
+module SchilledMechanic {
+    import {
+        Base
+    }
+
+    fixing M998 Roofrack
+    {
+        Require = Base.92amgeneralM998Roofrack,
+        ConditionModifier = 10,
+        Fixer = Base.MetalBar=4; MetalWelding=3; Mechanics=2,
+        Fixer = Base.MetalPipe=4; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Trunk Barrier
+    {
+        Require = Base.92amgeneralM998TrunkBarrier1;Base.92amgeneralM998TrunkBarrier2,
+        ConditionModifier = 10,
+        Fixer = Base.SheetMetal; MetalWelding=3; Mechanics=2,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Door Welding
+    {
+        Require = Base.92amgeneralM998FrontDoor2;Base.92amgeneralM998RearDoor2,
+        ConditionModifier = 10,
+        Fixer = Base.SheetMetal; MetalWelding=3; Mechanics=2,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Door Armor Welding
+    {
+        Require = Base.92amgeneralM998FrontArmor;Base.92amgeneralM998RearArmor;Base.92amgeneralM998WindshieldArmor0;Base.92amgeneralM998WindshieldArmor1,
+        ConditionModifier = 10,
+        Fixer = Base.SheetMetal=3; MetalWelding=5; Mechanics=3,
+        Fixer = Base.SmallSheetMetal=6; MetalWelding=5; Mechanics=3,
+    }
+
+    fixing M998 Fix Hood Welding
+    {
+        Require = Base.92amgeneralM998EngineDoor2,
+        ConditionModifier = 15,
+        Fixer = Base.SheetMetal; MetalWelding=3; Mechanics=2,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Trunk Welding
+    {
+        Require = Base.92amgeneralM998TrunkDoor2;Base.M101A3TrunkDoorTwo2;Base.M101A3Trunk2;Base.M101TrunkDoor2,
+        ConditionModifier = 10,
+        Fixer = Base.SheetMetal; MetalWelding=3; Mechanics=2,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Back cover
+    {
+        Require = Base.92amgeneralM998BackCover2;Base.M101A3Cover2;Base.M101A3Cover1_Item;Base.M101A3Tarp1_Item;KI5trailersTarp2,
+        ConditionModifier = 10,
+        Fixer = Base.SheetMetal; MetalWelding=3; Mechanics=2,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Muffler
+    {
+        Require = Base.92amgeneralM998Muffler1;Base.92amgeneralM998Muffler2,
+        ConditionModifier = 10,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Bullbar Welding
+    {
+        Require = Base.92amgeneralM998BullbarA;Base.92amgeneralM998BullbarB,
+        ConditionModifier = 10,
+        Fixer = Base.MetalBar=4; MetalWelding=3; Mechanics=2,
+        Fixer = Base.MetalPipe=4; MetalWelding=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Windows
+    {
+        Require = Base.92amgeneralM998Windshield2;Base.92amgeneralM998SideWindow2,
+        ConditionModifier = 10,
+        Fixer = Base.Sheet=2; Mechanics=2,
+        Fixer = Base.RippedSheets=3; Mechanics=2,
+    }
+
+    fixing M998 Fix Mudflap
+    {
+        Require = Base.92amgeneralM998Mudflap0,
+        ConditionModifier = 15,
+        Fixer = Base.LeatherStrips=6; Tailoring=4; Mechanics=4,
+    }
+
+    fixing RunFlat Tires
+    {
+        Require = runFlat.smallTire,
+        ConditionModifier = 10,
+        Fixer = Base.Glue=5; Mechanics=8,
+    }
+}
