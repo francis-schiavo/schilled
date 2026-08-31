@@ -1,6 +1,11 @@
 module Base {
     item BlowTorch
     {
-        UseDelta = 0.005,
+        UseDelta = 0.001,
+    }
+
+    craftRecipe RefillBlowTorch
+    {
+        OnCreate = SchilledMetalworker.OnCreate.RefillBlowTorch,
     }
 }
