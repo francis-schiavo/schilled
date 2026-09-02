@@ -1,0 +1,53 @@
+module SchilledCarpenter {
+    import {
+        Base
+    }
+
+    item ReinforcedBaseballBat
+    {
+        DisplayCategory = WeaponCrafted,
+        ItemType = base:weapon,
+        Weight = 2.5,
+        Icon = BaseballBat,
+        AttachmentType = Shovel,
+        BaseSpeed = 1.0,
+        BreakSound = BaseballBatBreak,
+        Categories = base:blunt,
+        ConditionLowerChanceOneIn = 50,
+        ConditionMax = 18,
+        CriticalChance = 45.0,
+        CritDmgMultiplier = 2.5,
+        DoorDamage = 7,
+        DoorHitSound = BaseballBatHit,
+        DropSound = BaseballBatDrop,
+        HitAngleMod = -30.0,
+        HitFloorSound = BaseballBatHit,
+        HitSound = BaseballBatHit,
+        IdleAnim = Idle_Weapon2,
+        KnockBackOnNoDeath = true,
+        KnockdownMod = 2.0,
+        MaxDamage = 1.6,
+        MaxHitcount = 2,
+        MaxRange = 1.25,
+        MinAngle = 0.75,
+        MinDamage = 1.2,
+        MinRange = 0.61,
+        MinimumSwingtime = 3.0,
+        PushBackMod = 0.5,
+        RunAnim = Run_Weapon2,
+        SplatBloodOnNoDeath = false,
+        SplatNumber = 1,
+        SubCategory = Swinging,
+        SwingAmountBeforeImpact = 0.02,
+        SwingAnim = Bat,
+        SwingSound = BaseballBatSwing,
+        Swingtime = 3.0,
+        TreeDamage = 1,
+        TwoHandWeapon = true,
+        WeaponLength = 0.5,
+        WeaponSprite = BaseballBat,
+        OnBreak = OnBreak.BaseballBat,
+        Tags = base:isfirefuel;base:repairwithglue;base:repairwithtape,
+        Researchablerecipes = CanReinforceLongWeapon;MakeRakeHeadWeapon;CarveBat;CarveShortBat,
+    }
+}

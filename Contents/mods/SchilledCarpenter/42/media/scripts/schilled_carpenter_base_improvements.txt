@@ -19,6 +19,11 @@ module Base {
         Weight = 9,
     }
 
+    item Plank
+    {
+        Weight = 2,
+    }
+
     craftRecipe SawLogs
     {
         Time = 120,

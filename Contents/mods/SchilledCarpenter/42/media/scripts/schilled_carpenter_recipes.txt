@@ -1,0 +1,27 @@
+module SchilledCarpenter {
+    import {
+        Base
+    }
+
+    craftRecipe ReinforceBaseballBat
+    {
+        timedAction = CraftWeapon2H,
+        time = 150,
+        Tags = AnySurfaceCraft,
+        category = Carpentry,
+        SkillRequired = Woodwork:5,
+        xpAward = Woodwork:25,
+
+        inputs
+        {
+            item 1 [Base.BaseballBat;Base.BaseballBat_Crafted] flags[InheritCondition;Prop2],
+            item 2 [Base.Plank;Base.WoodenStick2;Base.TreeBranch2],
+            item 5 [Base.Nails],
+            item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeLight],
+        }
+        outputs
+        {
+            item 1 SchilledCarpenter.ReinforcedBaseballBat,
+        }
+    }
+}

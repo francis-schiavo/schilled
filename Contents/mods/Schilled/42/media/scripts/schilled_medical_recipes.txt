@@ -1,0 +1,26 @@
+module Base {
+    craftRecipe DisinfectBandages
+    {
+        timedAction = ScrubClothWithSoap,
+        time = 150,
+        Tags = InHandCraft;Health;CanBeDoneFromFloor,
+        category = Medical,
+        OnTest = RecipeCodeOnTest.hotFluidContainer,
+        Tooltip = Tooltip_needsToBeHot,
+        inputs
+        {
+            item 10 [Base.RippedSheets;Base.Bandage] mode:destroy flags[AllowFavorite;InheritFavorite] mappers[ragType],
+            item 1 [*] mode:keep,
+            -fluid 0.5 [Water],
+        }
+        outputs
+        {
+            item 10 mapper:ragType,
+        }
+        itemMapper ragType
+        {
+            Base.AlcoholRippedSheets = Base.RippedSheets,
+            Base.AlcoholBandage = Base.Bandage,
+        }
+    }
+}
