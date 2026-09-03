@@ -24,4 +24,23 @@ module SchilledCarpenter {
             item 1 SchilledCarpenter.ReinforcedBaseballBat,
         }
     }
+
+    craftRecipe CoverPlankHandleWithRags
+    {
+        timedAction = CraftWeapon2H,
+        time = 150,
+        Tags = AnySurfaceCraft,
+        category = Carpentry,
+        xpAward = Woodwork:25,
+
+        inputs
+        {
+            item 1 [Base.Plank] flags[InheritCondition;Prop2],
+            item 4 [Base.RippedSheets],
+        }
+        outputs
+        {
+            item 1 SchilledCarpenter.RagHandlePlank,
+        }
+    }
 }
