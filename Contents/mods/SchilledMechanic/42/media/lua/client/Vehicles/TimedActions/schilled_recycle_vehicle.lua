@@ -1,53 +1,6 @@
 require "TimedActions/ISBaseTimedAction"
-require "server/schilled_mechanic"
 
 ISRecycleVehicle = ISBaseTimedAction:derive("ISRecycleVehicle")
-
-function string:startsWith(start)
-    return self:sub(1, #start) == start
-end
-
-local PartYieldTable = {
-    -- Electronics
-    ["Battery"] = "GetRecycleElectronicsYield",
-    ["Headlight"] = "GetRecycleElectronicsYield",
-    ["Radio"] = "GetRecycleElectronicsYield",
-    ["lightbar"] = "GetRecycleElectronicsYield",
-    ["Heater"] = "GetRecycleElectronicsYield",
-    -- Small metal sheet
-    ["GloveBox"] = "GetRecycleSmallMetalSheetYield",
-    ["Muffler"] = "GetRecycleSmallMetalSheetYield",
-    ["GasTank"] = "GetRecycleSmallMetalSheetYield",
-    ["M998Muffler"] = "GetRecycleSmallMetalSheetYield",
-    -- Metal sheet
-    ["Door"] = "GetRecycleMetalSheetYield",
-    ["EngineDoor"] = "GetRecycleMetalSheetYield",
-    ["Trunk"] = "GetRecycleMetalSheetYield",
-    ["TruckBed"] = "GetRecycleMetalSheetYield",
-    ["TrunkDoor"] = "GetRecycleMetalSheetYield",
-    ["M998Trunk"] = "GetRecycleMetalSheetYield",
-    ["M998Rooftrack"] = "GetRecycleSmallMetalSheetYield",
-    ["M998BackCover"] = "GetRecycleSmallMetalSheetYield",
-    -- Metal pipe
-    ["Suspension"] = "GetRecycleMetalPipeYield",
-    ["Brake"] = "GetRecycleMetalPipeYield",
-    -- Cloth
-    ["Seat"] = "GetRecycleCarSeatsYield",
-    -- Military
-    ["M998WindshieldArmor"] = "GetRecycleArmorYield",
-    ["M998Door"] = "GetRecycleArmorYield",
-    ["M998BullBar"] = "GetRecycleBigMetalPipeYield",
-    ["M998Mudflaps"] = "GetRecycleSmallMetalSheetYield"
-}
-
-function PartYieldTable:FindFunctionForPart(partId)
-    for k, v in pairs(self) do
-        if partId:startsWith(k) then
-            return v
-        end
-    end
-    return false
-end
 
 local function predicateBlowTorch(item)
 	return (item:hasTag(ItemTag.BLOW_TORCH) or item:getType() == "BlowTorch") and item:getCurrentUses() >= 10
@@ -89,70 +42,18 @@ function ISRecycleVehicle:stop()
     ISBaseTimedAction.stop(self)
 end
 
-function ISRecycleVehicle:mergeYieldTable(allParts, allXP, newParts, xpYield)
-    for item, amount in pairs(newParts) do
-        if allParts[item] == nil then
-            allParts[item] = amount
-        else
-            allParts[item] = allParts[item] + amount
-        end
-    end
-
-    for perk, amount in pairs(xpYield) do
-        if allXP[perk] == nil then
-            allXP[perk] = amount
-        else
-            allXP[perk] = allXP[perk] + amount
-        end
-    end
-end
-
 function ISRecycleVehicle:perform()
     if self.sound ~= 0 then
         self.character:getEmitter():stopSound(self.sound)
     end
 
-    -- Base yield
-    local itemYield = {
-        ["Base.MetalBar"] = 2,
-        ["Base.MetalPipe"] = 4,
-        ["Base.SheetMetal"] = 5,
-        ["Base.SmallSheetMetal"] = 6,
-        ["Base.ScrapMetal"] = 30,
-    }
-    local xpYield = {
-        [Perks.MetalWelding] = 10,
-        [Perks.Mechanics] = 10,
-    }
+    -- Loot + vehicle removal must run on the server in MP.
+    -- Spawning with AddWorldInventoryItem from this client perform() created
+    -- ghost items that could not be picked up and vanished on reconnect.
+    sendClientCommand(self.character, "SchilledMechanic", "recycleVehicle", {
+        vehicleId = self.vehicle:getId(),
+    })
 
-    local totalXp = 10;
-    -- Adittional yield based on installed parts
-    if self.vehicle ~= nil then
-        for partIndex=1,self.vehicle:getPartCount() do
-            local vehiclePart = self.vehicle:getPartByIndex(partIndex-1)
-            if vehiclePart then
-                local partName = vehiclePart:getId()
-                if partName == "Engine" then
-                    local yield, xp = SchilledMechanic:GetRecycleEngineYield(vehiclePart:getCondition())
-                    self:mergeYieldTable(itemYield, xpYield, yield, xp)
-                else
-                    local yieldFunction = PartYieldTable:FindFunctionForPart(partName)
-                    if yieldFunction then
-                        local yield, xp = SchilledMechanic[yieldFunction](SchilledMechanic, self.character)
-                        self:mergeYieldTable(itemYield, xpYield, yield, xp)
-                    else
-                        print("NO YIELD FUNCTION FOR PART: " .. partName)
-                    end
-                end
-            end
-        end
-    end
-    for _, amount in pairs(itemYield) do
-        totalXp = totalXp + (amount * 10)
-    end
-    SchilledMechanic:YieldToWorld(self.vehicle:getSquare(), itemYield)
-    SchilledMechanic:AddXp(self.character, xpYield)
-    sendClientCommand(self.character, "vehicle", "remove", { vehicle = self.vehicle:getId() })
     self.item:setJobDelta(0);
     ISBaseTimedAction.perform(self)
 end

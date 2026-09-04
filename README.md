@@ -86,6 +86,7 @@ Allows cooking homemade glue.
 - **Refill glue bottles** (`RefillGlueBottle`): turns a pot of homemade glue
   into 25 `Glue`.
 - Raw homemade glue is drinkable and highly poisonous (`PoisonPower = 120`).
+- Also allows you to slice baguettes into bread slices and yeld more slices from a loaf of bread.
 
 ### SchilledMechanic
 

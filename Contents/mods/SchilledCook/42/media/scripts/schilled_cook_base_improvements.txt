@@ -1,0 +1,25 @@
+module Base {
+    craftRecipe SliceBread
+    {
+        outputs
+        {
+            item 7 Base.BreadSlices,
+        }
+    }
+
+    craftRecipe MakeBreadDough
+    {
+        outputs
+        {
+            item 2 Base.BreadDough,
+        }
+    }
+
+    craftRecipe MakeBaguetteDough
+    {
+        outputs
+        {
+            item 2 Base.BaguetteDough,
+        }
+    }
+}

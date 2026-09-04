@@ -140,3 +140,103 @@ function SchilledMechanic:GetRecycleWoodenYield(player)
         ["Base.Plank"] = self:GetYield(percentage, 0, 1)
     }, { [Perks.Woodwork] = 10, [Perks.Mechanics] = 10 }
 end
+
+local PartYieldTable = {
+    -- Electronics
+    ["Battery"] = "GetRecycleElectronicsYield",
+    ["Headlight"] = "GetRecycleElectronicsYield",
+    ["Radio"] = "GetRecycleElectronicsYield",
+    ["lightbar"] = "GetRecycleElectronicsYield",
+    ["Heater"] = "GetRecycleElectronicsYield",
+    -- Small metal sheet
+    ["GloveBox"] = "GetRecycleSmallMetalSheetYield",
+    ["Muffler"] = "GetRecycleSmallMetalSheetYield",
+    ["GasTank"] = "GetRecycleSmallMetalSheetYield",
+    ["M998Muffler"] = "GetRecycleSmallMetalSheetYield",
+    -- Metal sheet
+    ["Door"] = "GetRecycleMetalSheetYield",
+    ["EngineDoor"] = "GetRecycleMetalSheetYield",
+    ["Trunk"] = "GetRecycleMetalSheetYield",
+    ["TruckBed"] = "GetRecycleMetalSheetYield",
+    ["TrunkDoor"] = "GetRecycleMetalSheetYield",
+    ["M998Trunk"] = "GetRecycleMetalSheetYield",
+    ["M998Rooftrack"] = "GetRecycleSmallMetalSheetYield",
+    ["M998BackCover"] = "GetRecycleSmallMetalSheetYield",
+    -- Metal pipe
+    ["Suspension"] = "GetRecycleMetalPipeYield",
+    ["Brake"] = "GetRecycleMetalPipeYield",
+    -- Cloth
+    ["Seat"] = "GetRecycleCarSeatsYield",
+    -- Military
+    ["M998WindshieldArmor"] = "GetRecycleArmorYield",
+    ["M998Door"] = "GetRecycleArmorYield",
+    ["M998BullBar"] = "GetRecycleBigMetalPipeYield",
+    ["M998Mudflaps"] = "GetRecycleSmallMetalSheetYield"
+}
+
+local function partIdStartsWith(partId, prefix)
+    return partId:sub(1, #prefix) == prefix
+end
+
+local function findYieldFunctionForPart(partId)
+    for prefix, fnName in pairs(PartYieldTable) do
+        if partIdStartsWith(partId, prefix) then
+            return fnName
+        end
+    end
+    return nil
+end
+
+local function mergeYieldTable(allParts, allXP, newParts, xpYield)
+    for item, amount in pairs(newParts) do
+        if allParts[item] == nil then
+            allParts[item] = amount
+        else
+            allParts[item] = allParts[item] + amount
+        end
+    end
+
+    for perk, amount in pairs(xpYield) do
+        if allXP[perk] == nil then
+            allXP[perk] = amount
+        else
+            allXP[perk] = allXP[perk] + amount
+        end
+    end
+end
+
+function SchilledMechanic:GetVehicleRecycleYield(vehicle, character)
+    local itemYield = {
+        ["Base.MetalBar"] = 2,
+        ["Base.MetalPipe"] = 4,
+        ["Base.SheetMetal"] = 5,
+        ["Base.SmallSheetMetal"] = 6,
+        ["Base.ScrapMetal"] = 30,
+    }
+    local xpYield = {
+        [Perks.MetalWelding] = 10,
+        [Perks.Mechanics] = 10,
+    }
+
+    if vehicle ~= nil then
+        for partIndex = 1, vehicle:getPartCount() do
+            local vehiclePart = vehicle:getPartByIndex(partIndex - 1)
+            if vehiclePart then
+                local partName = vehiclePart:getId()
+                if partName == "Engine" then
+                    local yield, xp = self:GetRecycleEngineYield(vehiclePart:getCondition())
+                    mergeYieldTable(itemYield, xpYield, yield, xp)
+                else
+                    local yieldFunction = findYieldFunctionForPart(partName)
+                    if yieldFunction then
+                        local yield, xp = self[yieldFunction](self, character)
+                        mergeYieldTable(itemYield, xpYield, yield, xp)
+                    end
+                end
+            end
+        end
+    end
+
+    return itemYield, xpYield
+end
+

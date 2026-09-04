@@ -2,9 +2,9 @@ if isClient() then
     return
 end
 
-local SchilledMechanic = {}
+local Commands = {}
 
-function SchilledMechanic:repairPart(player, vehicleId, partId, targetCondition, requiredItems)
+function Commands:repairPart(player, vehicleId, partId, targetCondition, requiredItems)
     local vehicle = getVehicleById(vehicleId)
 
     if vehicle then
@@ -25,16 +25,30 @@ function SchilledMechanic:repairPart(player, vehicleId, partId, targetCondition,
     end
 end
 
-SchilledMechanic.OnClientCommand = function(module, command, player, args)
+function Commands:recycleVehicle(player, vehicleId)
+    local vehicle = getVehicleById(vehicleId)
+    if not vehicle then
+        return
+    end
+
+    local square = vehicle:getSquare()
+    local itemYield, xpYield = SchilledMechanic:GetVehicleRecycleYield(vehicle, player)
+
+    SchilledMechanic:YieldToWorld(square, itemYield)
+    SchilledMechanic:AddXp(player, xpYield)
+    vehicle:permanentlyRemove()
+end
+
+local function onClientCommand(module, command, player, args)
     if module ~= 'SchilledMechanic' then
         return
     end
 
-    if command ~= "repairPart" then
-        return
+    if command == "repairPart" then
+        Commands:repairPart(player, args.vehicleId, args.partId, args.targetCondition, args["requiredItems"])
+    elseif command == "recycleVehicle" then
+        Commands:recycleVehicle(player, args.vehicleId)
     end
-
-    SchilledMechanic:repairPart(player, args.vehicleId, args.partId, args.targetCondition, args["requiredItems"])
 end
 
-Events.OnClientCommand.Add(SchilledMechanic.OnClientCommand)
+Events.OnClientCommand.Add(onClientCommand)

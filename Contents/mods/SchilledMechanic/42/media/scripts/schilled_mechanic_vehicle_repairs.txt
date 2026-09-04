@@ -9,7 +9,7 @@ module SchilledMechanic {
 
         ConditionModifier = 10,
 
-        Fixer = ElectronicsScrap=10; Electricity=5; Mechanics=8,
+        Fixer = Base.ElectronicsScrap=10; Electricity=5; Mechanics=8,
     }
 
     fixing Fix Suspension Welding
@@ -19,8 +19,8 @@ module SchilledMechanic {
         GlobalItem = Base.BlowTorch=3,
         ConditionModifier = 10,
 
-        Fixer = MetalPipe=2; MetalWelding=3; Mechanics=3,
-        Fixer = MetalBar=2; MetalWelding=3; Mechanics=3,
+        Fixer = Base.MetalPipe=2; MetalWelding=3; Mechanics=3,
+        Fixer = Base.MetalBar=2; MetalWelding=3; Mechanics=3,
     }
 
     fixing Fix Brake Welding
@@ -30,8 +30,8 @@ module SchilledMechanic {
         GlobalItem = Base.BlowTorch=2,
         ConditionModifier = 10,
 
-        Fixer = MetalBar=2; MetalWelding=4; Mechanics=5,
-        Fixer = MetalPipe=2; MetalWelding=4; Mechanics=5,
+        Fixer = Base.MetalBar=2; MetalWelding=4; Mechanics=5,
+        Fixer = Base.MetalPipe=2; MetalWelding=4; Mechanics=5,
     }
 
     fixing Fix Muffler Welding
@@ -41,7 +41,7 @@ module SchilledMechanic {
         GlobalItem = Base.BlowTorch=3,
         ConditionModifier = 10,
 
-        Fixer = SmallSheetMetal=2; MetalWelding=3; Mechanics=3,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=3,
     }
 
     fixing Fix Car Tires
@@ -50,7 +50,7 @@ module SchilledMechanic {
 
         ConditionModifier = 10,
 
-        Fixer = Glue=5; Mechanics=8,
+        Fixer = Base.Glue=5; Mechanics=8,
     }
 
     fixing Fix Window
@@ -60,8 +60,8 @@ module SchilledMechanic {
         GlobalItem = Base.Screws=5,
         ConditionModifier = 10,
 
-        Fixer = SheetMetal; Mechanics=5,
-        Fixer = SmallSheetMetal=2; Mechanics=5,
+        Fixer = Base.SheetMetal; Mechanics=5,
+        Fixer = Base.SmallSheetMetal=2; Mechanics=5,
     }
 
     fixing Fix Window with cloth
@@ -69,8 +69,8 @@ module SchilledMechanic {
         Require = Base.FrontWindow1;Base.RearWindow1;Base.FrontWindow2;Base.RearWindow2;Base.FrontWindow3;Base.RearWindow3;Base.Windshield1;Base.RearWindshield1;Base.Windshield2;Base.RearWindshield2;Base.Windshield3;Base.RearWindshield3,
         ConditionModifier = 1.5,
 
-        Fixer = Sheet=2; Mechanics=2,
-        Fixer = RippedSheets=3; Mechanics=2,
+        Fixer = Base.Sheet=2; Mechanics=2,
+        Fixer = Base.RippedSheets=3; Mechanics=2,
     }
 
     fixing Fix Light
@@ -79,8 +79,8 @@ module SchilledMechanic {
 
         ConditionModifier = 10,
 
-        Fixer = ElectronicsScrap=10; Electricity=5; Mechanics=5,
-        Fixer = ElectricWire=5; Electricity=5; Mechanics=5,
+        Fixer = Base.ElectronicsScrap=10; Electricity=5; Mechanics=5,
+        Fixer = Base.ElectricWire=5; Electricity=5; Mechanics=5,
     }
 
     fixing Fix Radio
@@ -89,35 +89,35 @@ module SchilledMechanic {
 
         ConditionModifier = 10,
 
-        Fixer = ElectronicsScrap=10; Electricity=5; Mechanics=5,
-        Fixer = ElectricWire=5; Electricity=5; Mechanics=5,
+        Fixer = Base.ElectronicsScrap=10; Electricity=5; Mechanics=5,
+        Fixer = Base.ElectricWire=5; Electricity=5; Mechanics=5,
     }
 
     fixing Fix LightbarBlue
     {
         Require = Base.LightbarBlue,
         ConditionModifier = 10,
-        Fixer = LightBulbBlue=2; Electricity=2,
+        Fixer = Base.LightBulbBlue=2; Electricity=2,
     }
 
     fixing Fix LightbarRed
     {
         Require = Base.LightbarRed,
         ConditionModifier = 10,
-        Fixer = LightBulbRed=2; Electricity=2,
+        Fixer = Base.LightBulbRed=2; Electricity=2,
     }
 
     fixing Fix LightbarYellow
     {
         Require = Base.LightbarYellow,
         ConditionModifier = 10,
-        Fixer = LightBulbYellow=2; Electricity=2,
+        Fixer = Base.LightBulbYellow=2; Electricity=2,
     }
 
     fixing Fix LightbarRedBlue
     {
         Require = Base.LightbarRedBlue,
         ConditionModifier = 10,
-        Fixer = LightBulbBlue=1; Base.LightBulbRed=1; Electricity=2,
+        Fixer = Base.LightBulbBlue=1; Base.LightBulbRed=1; Electricity=2,
     }
 }
