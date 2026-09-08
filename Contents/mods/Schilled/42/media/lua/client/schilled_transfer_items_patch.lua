@@ -1,4 +1,4 @@
-require "TimedActions/ISInventoryTransferAction"
+require("TimedActions/ISInventoryTransferAction")
 
 local oldInit = ISInventoryTransferAction.new;
 

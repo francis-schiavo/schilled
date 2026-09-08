@@ -3,6 +3,7 @@ module Base {
     {
         UseDelta=0.05,
         Weight=0.1,
+        cantBeConsolided = false,
         ConsolidateOption = ContextMenu_Merge,
     }
 }
