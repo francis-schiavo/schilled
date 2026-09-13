@@ -12,7 +12,17 @@ function Commands:repairPart(player, vehicleId, partId, targetCondition, require
         part:setCondition(targetCondition)
 
         for partType, partCount in pairs(requiredItems) do
-            player:sendObjectChange('removeItemType', { type = partType, count = partCount })
+            local itemsToRemove = player:getInventory():getSomeTypeRecurse(partType, partCount)
+            if itemsToRemove then
+                for i = 0, itemsToRemove:size() - 1 do
+                    local item = itemsToRemove:get(i)
+                    local container = item and item:getContainer()
+                    if item and container then
+                        container:DoRemoveItem(item)
+                        sendRemoveItemFromContainer(container, item)
+                    end
+                end
+            end
         end
 
         vehicle:updatePartStats()

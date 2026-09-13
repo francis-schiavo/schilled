@@ -118,4 +118,26 @@ module SchilledMetalworker {
         Tags = base:hasmetal,
         MaxItemSize = 2.0,
     }
+
+    model KeymasterMagGround
+    {
+        mesh = WorldItems/Magazine,
+        texture = WorldItems/MagazineKeys,
+        scale = 0.4,
+    }
+
+    item KeymasterMag
+    {
+        DisplayCategory = RecipeResource,
+        ItemType = base:literature,
+        Weight = 0.1,
+        Icon = MagazineKeymaster,
+        BoredomChange = -20,
+        StressChange = -15,
+        LearnedRecipes = CreateCarKey;CreateBuildingKey;CreateDoorKey,
+        StaticModel = Magazine,
+        WorldStaticModel = KeymasterMagGround,
+        Tags = base:magazine,
+        OnCreate = ItemCodeOnCreate.onCreateRecipeMagazine,
+    }
 }

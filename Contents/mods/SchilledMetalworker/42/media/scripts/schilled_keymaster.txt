@@ -1,65 +1,58 @@
 module Base {
-    model MagazineMetal1Ground
+    craftRecipe CreateCarKey
     {
-        mesh=WorldItems/Magazine,
-        texture=WorldItems/MagazineKeys,
-        scale=0.4,
+        timedAction = Making,
+        time = 150,
+        NeedToBeLearn = true,
+        Tags = InHandCraft,
+        Category = Metalworking,
+        SkillRequired = MetalWelding:5,
+        xpAward = MetalWelding:25,
+        inputs
+        {
+            item 5 [Base.ScrapMetal],
+        }
+        outputs
+        {
+            item 1 Base.Key1,
+        }
     }
 
-    item KeymasterMag
+    craftRecipe CreateBuildingKey
     {
-        DisplayCategory = RecipeResource,
-        ItemType = base:literature,
-        Weight = 0.1,
-        Icon = MagazineKeymaster,
-        BoredomChange = -20,
-        StressChange = -15,
-        LearnedRecipes = CreateCarKey;CreateBuildingKey;CreateDoorKey,
-        StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
-        Tags = base:magazine,
-        OnCreate = ItemCodeOnCreate.onCreateRecipeMagazine,
-    }
-
-    craftRecipe CreateCarKey {
         timedAction = Making,
         time = 150,
         NeedToBeLearn = true,
         Tags = InHandCraft,
+        Category = Metalworking,
         SkillRequired = MetalWelding:5,
         xpAward = MetalWelding:25,
-        inputs {
+        inputs
+        {
             item 5 [Base.ScrapMetal],
         }
-        outputs {
+        outputs
+        {
+            item 1 Base.Key1,
         }
     }
 
-    craftRecipe CreateBuildingKey {
+    craftRecipe CreateDoorKey
+    {
         timedAction = Making,
         time = 150,
         NeedToBeLearn = true,
         Tags = InHandCraft,
+        Category = Metalworking,
         SkillRequired = MetalWelding:5,
         xpAward = MetalWelding:25,
-        inputs {
+        inputs
+        {
             item 5 [Base.ScrapMetal],
         }
-        outputs {
-        }
-    }
-
-    craftRecipe CreateDoorKey {
-        timedAction = Making,
-        time = 150,
-        NeedToBeLearn = true,
-        Tags = InHandCraft,
-        SkillRequired = MetalWelding:5,
-        xpAward = MetalWelding:25,
-        inputs {
-            item 5 [Base.ScrapMetal],
-        }
-        outputs {
+        outputs
+        {
+            item 1 Base.Key1,
         }
     }
 }
