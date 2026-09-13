@@ -16,7 +16,7 @@ end
 function ISRecycleVehicle:update()
     self.character:faceThisObject(self.vehicle)
     self.item:setJobDelta(self:getJobDelta())
-    self.item:setJobType(getText("ContextMenu_RemoveBurntVehicle"))
+    self.item:setJobType(getText("ContextMenu_RecycleVehicle"))
 
     if self.sound ~= 0 and not self.character:getEmitter():isPlaying(self.sound) then
         self.sound = self.character:playSound("BlowTorch")

@@ -13,4 +13,6 @@ function ISRepairEngine:complete()
     if self.part:getCondition() >= 100 then
         self.vehicle:setEngineFeature(100, engineLoudness, enginePower);
     end
+    self.vehicle:updatePartStats()
+    self.vehicle:updateBulletStats()
 end

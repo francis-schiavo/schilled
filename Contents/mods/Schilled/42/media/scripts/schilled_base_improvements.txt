@@ -6,4 +6,12 @@ module Base {
         cantBeConsolided = false,
         ConsolidateOption = ContextMenu_Merge,
     }
+
+    craftRecipe unstack_items {
+        time = 30,
+    }
+
+    craftRecipe stack_items {
+        time = 30,
+    }
 }

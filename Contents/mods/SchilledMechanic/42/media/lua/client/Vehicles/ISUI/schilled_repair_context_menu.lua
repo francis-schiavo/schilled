@@ -104,4 +104,5 @@ function ISVehicleMenu.FillMenuOutsideVehicle(player, context, vehicle, test)
     recycleOption.toolTip, recycleOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.WeldingMask"] = 1, ["Base.BlowTorch"] = 1 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 })
 
     originalContextMenu2(player, context, vehicle, test)
+    context:removeOptionByName(getText("ContextMenu_RemoveBurntVehicle"));
 end

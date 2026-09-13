@@ -1,5 +1,7 @@
 {
     "ReinforceMachete": "Reinforce Machete",
     "MakeSuperMachete": "Make Super Machete",
-    "MakeReinforcedToolbox": "Make Reinforced Toolbox"
+    "MakeReinforcedToolbox": "Make Reinforced Toolbox",
+    "CreateCarKey": "Create Car Key",
+    "CreateBuildingKey": "Create Building Key"
 }

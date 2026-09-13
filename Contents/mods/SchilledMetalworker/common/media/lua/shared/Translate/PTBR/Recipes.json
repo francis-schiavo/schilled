@@ -1,5 +1,7 @@
 {
     "ReinforceMachete": "Reforçar Machete",
     "MakeSuperMachete": "Fazer Super Machete",
-    "MakeReinforcedToolbox": "Fazer Caixa de Ferramentas Reforçada"
+    "MakeReinforcedToolbox": "Fazer Caixa de Ferramentas Reforçada",
+    "CreateCarKey": "Criar Chave do Carro",
+    "CreateBuildingKey": "Criar Chave do Prédio"
 }
