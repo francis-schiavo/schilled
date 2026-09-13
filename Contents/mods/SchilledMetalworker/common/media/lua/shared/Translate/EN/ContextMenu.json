@@ -1,4 +1,5 @@
 {
   "ContextMenu_CreateCarKey": "Create car key",
-  "ContextMenu_CreateBuildingKey": "Create building key"
+  "ContextMenu_CreateBuildingKey": "Create building key",
+  "ContextMenu_CreateDoorKey": "Create door key"
 }

@@ -1,4 +1,5 @@
 {
   "ContextMenu_CreateCarKey": "Criar chave do carro",
-  "ContextMenu_CreateBuildingKey": "Criar chave do prédio"
+  "ContextMenu_CreateBuildingKey": "Criar chave do prédio",
+  "ContextMenu_CreateDoorKey": "Criar chave da porta"
 }
