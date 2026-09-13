@@ -72,10 +72,10 @@ function Commands:getDoorKey(player, args)
     local key = instanceItem("Base.Key1")
     key:setKeyId(keyID)
 
-    player:getInventory():AddItem(key)
-    sendAddItemToContainer(player:getInventory(), key);
     local items = player:getInventory():RemoveAll('Base.ScrapMetal', 5)
     sendRemoveItemsFromContainer(player:getInventory(), items);
+    player:getInventory():AddItem(key)
+    sendAddItemToContainer(player:getInventory(), key);
 end
 
 local function onClientCommand(module, command, player, args)
@@ -88,7 +88,7 @@ local function onClientCommand(module, command, player, args)
     elseif command == "getVehicleKey" then
         Commands:getVehicleKey(player, args.vehicleId)
     elseif command == "getDoorKey" then
-            Commands:getDoorKey(player, args)
+        Commands:getDoorKey(player, args)
     end
 end
 
