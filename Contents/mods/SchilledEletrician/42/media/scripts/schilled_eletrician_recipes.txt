@@ -1,0 +1,96 @@
+module SchilledEletrician
+{
+    import
+    {
+        Base
+    }
+
+    craftRecipe CraftLightbarRedBlue
+    {
+        timedAction = Making,
+        time = 200,
+        tags = InHandCraft;CanBeDoneFromFloor,
+        Category = Electrical,
+        SkillRequired = Electricity:5,
+        xpAward = Electricity:25,
+
+        inputs
+        {
+            item 10 [Base.ElectronicsScrap],
+            item 5 [Base.ScrapMetal],
+            item 1 [Base.LightBulbRed],
+            item 1 [Base.LightBulbBlue],
+            item 1 tags[base:screwdriver] mode:keep flags[MayDegradeLight;IsNotDull;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.LightbarRedBlue,
+        }
+    }
+
+    craftRecipe CraftLightbarBlue
+    {
+        timedAction = Making,
+        time = 200,
+        tags = InHandCraft;CanBeDoneFromFloor,
+        Category = Electrical,
+        SkillRequired = Electricity:5,
+        xpAward = Electricity:25,
+
+        inputs
+        {
+            item 10 [Base.ElectronicsScrap],
+            item 5 [Base.ScrapMetal],
+            item 2 [Base.LightBulbBlue],
+            item 1 tags[base:screwdriver] mode:keep flags[MayDegradeLight;IsNotDull;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.LightbarBlue,
+        }
+    }
+
+    craftRecipe CraftLightbarRed
+    {
+        timedAction = Making,
+        time = 200,
+        tags = InHandCraft;CanBeDoneFromFloor,
+        Category = Electrical,
+        SkillRequired = Electricity:5,
+        xpAward = Electricity:25,
+
+        inputs
+        {
+            item 10 [Base.ElectronicsScrap],
+            item 5 [Base.ScrapMetal],
+            item 2 [Base.LightBulbRed],
+            item 1 tags[base:screwdriver] mode:keep flags[MayDegradeLight;IsNotDull;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.LightbarRed,
+        }
+    }
+
+    craftRecipe CraftLightbarYellow
+    {
+        timedAction = Making,
+        time = 200,
+        tags = InHandCraft;CanBeDoneFromFloor,
+        Category = Electrical,
+        SkillRequired = Electricity:5,
+        xpAward = Electricity:25,
+
+        inputs
+        {
+            item 10 [Base.ElectronicsScrap],
+            item 5 [Base.ScrapMetal],
+            item 2 [Base.LightBulbYellow],
+            item 1 tags[base:screwdriver] mode:keep flags[MayDegradeLight;IsNotDull;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.LightbarYellow,
+        }
+    }
+}

@@ -97,11 +97,27 @@ function ISVehicleMenu.onRecycle(player, vehicle)
     end
 end
 
+function verifyOwnership(playerObj, vehicle)
+    local owners = vehicle:getModData().claimedBy or {}
+    local hasOwner = false
+    for _, _ in pairs(owners) do
+        hasOwner = true
+        break
+    end
+    local ownedByPlayer = owners[playerObj:getUsername()] ~= nil
+
+    return hasOwner, ownedByPlayer
+end
+
 function ISVehicleMenu.FillMenuOutsideVehicle(player, context, vehicle, test)
     local playerObj = getSpecificPlayer(player)
 
-    local recycleOption = context:addOption(getText("ContextMenu_RecycleVehicle"), playerObj, ISVehicleMenu.onRecycle, vehicle)
-    recycleOption.toolTip, recycleOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.WeldingMask"] = 1, ["Base.BlowTorch"] = 1 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 })
+    local hasOwner, ownedByPlayer = verifyOwnership(playerObj, vehicle);
+
+    if !hasOwner or ownedByPlayer then
+        local recycleOption = context:addOption(getText("ContextMenu_RecycleVehicle"), playerObj, ISVehicleMenu.onRecycle, vehicle)
+        recycleOption.toolTip, recycleOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.WeldingMask"] = 1, ["Base.BlowTorch"] = 1 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 })
+    end
 
     originalContextMenu2(player, context, vehicle, test)
     context:removeOptionByName(getText("ContextMenu_RemoveBurntVehicle"));

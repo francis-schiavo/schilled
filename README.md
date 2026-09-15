@@ -38,7 +38,7 @@ into the base mod, so leave Schilled enabled.
 
 This pack is Build 42 only.
 
-Carpenter, Cook, Mechanic, Metalworker, Tailor, Admin and the base mod ship
+Carpenter, Cook, Mechanic, Metalworker, Eletrician, Tailor, Admin and the base mod ship
 English and Brazilian Portuguese translations.
 
 ## Mods
@@ -168,6 +168,11 @@ how to cut keys.
 - **Reinforce first aid kit** (`ReinforceFirstAidKit`, Tailoring 8): empty first
   aid kit + 2 denim strips + 2 leather strips + 5 thread. Capacity 8, weight
   reduction 60.
+
+
+### SchilledEletrician
+
+Craft vehicle lightbars at Electricity 5 from electronics scrap, scrap metal, colored bulbs, and a screwdriver: `Base.LightbarRedBlue`, `Base.LightbarRed`, `Base.LightbarBlue`, and `Base.LightbarYellow`.
 
 ### SchilledAdmin
 
