@@ -65,4 +65,23 @@ module SchilledCarpenter {
             item 1 SchilledCarpenter.RagHandlePlank,
         }
     }
+
+    craftRecipe SawPlank
+    {
+        timedAction = SawLogs,
+        time = 230,
+        Tags = InHandCraft;CanBeDoneFromFloor,
+        category = Carpentry,
+        xpAward = Woodwork:25,
+        SkillRequired = Woodwork:2,
+        inputs
+        {
+            item 1 [Base.Plank] flags[Prop2],
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight;Prop1],
+        }
+        outputs
+        {
+            item 12 Base.LongStick,
+        }
+    }
 }
