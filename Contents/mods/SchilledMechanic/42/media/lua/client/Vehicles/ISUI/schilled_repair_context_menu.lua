@@ -114,7 +114,7 @@ function ISVehicleMenu.FillMenuOutsideVehicle(player, context, vehicle, test)
 
     local hasOwner, ownedByPlayer = verifyOwnership(playerObj, vehicle);
 
-    if !hasOwner or ownedByPlayer then
+    if not hasOwner or ownedByPlayer then
         local recycleOption = context:addOption(getText("ContextMenu_RecycleVehicle"), playerObj, ISVehicleMenu.onRecycle, vehicle)
         recycleOption.toolTip, recycleOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.WeldingMask"] = 1, ["Base.BlowTorch"] = 1 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 })
     end

@@ -1,5 +1,5 @@
 {
-    "ClaimVehicle": "Claim vehicle",
-    "UnclaimVehicle": "Unclaim vehicle",
-    "VehicleClaimed": "Vehicle claimed"
+    "ContextMenu_ClaimVehicle": "Claim vehicle",
+    "ContextMenu_UnclaimVehicle": "Unclaim vehicle",
+    "ContextMenu_VehicleClaimed": "Vehicle claimed"
 }
