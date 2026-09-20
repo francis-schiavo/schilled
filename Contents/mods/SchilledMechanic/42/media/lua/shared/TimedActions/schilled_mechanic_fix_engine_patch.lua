@@ -15,4 +15,5 @@ function ISRepairEngine:complete()
     end
     self.vehicle:updatePartStats()
     self.vehicle:updateBulletStats()
+    self.vehicle:transmitPartCondition(self.part)
 end

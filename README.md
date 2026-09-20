@@ -145,10 +145,10 @@ how to cut keys.
 - Blowtorches last much longer (`UseDelta = 0.001`). Refilling from a propane
   tank is rewritten to match that use rate.
 
-### SchilledPainter
+### SchilledMason
 
-- Paint buckets (all colours) and plaster buckets last a lot longer
-  (`UseDelta = 0.01`).
+- Paint cans (all colours), plaster buckets, and cement/concrete buckets last
+  10× longer (`UseDelta` is 1/10 of vanilla: paint/plaster `0.01`, cement `0.025`).
 
 ### SchilledTailor
 
@@ -169,6 +169,10 @@ how to cut keys.
   aid kit + 2 denim strips + 2 leather strips + 5 thread. Capacity 8, weight
   reduction 60.
 
+
+### SchilledBlacksmith
+
+WIP scaffold — blacksmith features coming soon.
 
 ### SchilledEletrician
 

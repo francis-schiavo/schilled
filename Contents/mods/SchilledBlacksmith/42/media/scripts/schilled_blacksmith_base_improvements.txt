@@ -1,0 +1,68 @@
+module Base {
+    craftRecipe MakeWoodCharcoal
+    {
+        outputs
+        {
+            item 8 Base.CharcoalCrafted,
+        }
+    }
+
+    craftRecipe MakeWoodCharcoalLarge
+    {
+        outputs
+        {
+            item 8 Base.CharcoalCrafted,
+        }
+    }
+
+    craftRecipe MakeWoodCharcoalMedium
+    {
+        outputs
+        {
+            item 8 Base.CharcoalCrafted,
+        }
+    }
+
+    craftRecipe MakeWoodCharcoalSmall
+    {
+        outputs
+        {
+            item 8 Base.CharcoalCrafted,
+        }
+    }
+
+    craftRecipe ExtractIronBloom { time = 30, }
+    craftRecipe SmeltCopperOre { time = 30, }
+    craftRecipe ExtractIronFromIronBloom { time = 30, }
+    craftRecipe ExtractIronFromIronOre { time = 30, }
+    craftRecipe ExtractIronFromLargeItem { time = 30, }
+    craftRecipe ExtractIronFromMediumItem { time = 30, }
+    craftRecipe ExtractIronFromMediumPlusItem { time = 30, }
+    craftRecipe ExtractIronFromSmallItem { time = 30, }
+    craftRecipe ExtractIronFromSmallerItems { time = 30, }
+    craftRecipe ExtractSteelFromLargeItem { time = 30, }
+    craftRecipe ExtractSteelFromMediumItem { time = 30, }
+    craftRecipe ExtractSteelFromMediumPlusItem { time = 30, }
+    craftRecipe ExtractSteelFromSmallItem { time = 30, }
+    craftRecipe ExtractSteelFromLargeIronItem { time = 30, }
+    craftRecipe ExtractSteelFromMediumIronItem { time = 30, }
+    craftRecipe ExtractSteelFromMediumPlusIronItem { time = 30, }
+    craftRecipe ExtractSteelFromSmallIronItem { time = 30, }
+    craftRecipe ExtractSteelFromSmallerIronItems { time = 30, }
+    craftRecipe SmeltLargeIronItem { time = 30, }
+    craftRecipe SmeltMediumIronItem { time = 30, }
+    craftRecipe SmeltMediumPlusIronItem { time = 30, }
+    craftRecipe SmeltSmallIronItem { time = 30, }
+    craftRecipe SmeltSmallerIronItem { time = 30, }
+    craftRecipe SmeltSmallerSteelItem { time = 30, }
+    craftRecipe CastIronBar { time = 30, }
+    craftRecipe CastIronIngot { time = 30, }
+    craftRecipe SmeltLargeSteelItem { time = 30, }
+    craftRecipe SmeltMediumSteelItem { time = 30, }
+    craftRecipe SmeltMediumPlusSteelItem { time = 30, }
+    craftRecipe SmeltSmallSteelItem { time = 30, }
+    craftRecipe CastSteelBar { time = 30, }
+    craftRecipe CastSteelIngot { time = 30, }
+    craftRecipe CastSteelIngotFromIron { time = 30, }
+    craftRecipe CastSteelBarFromIron { time = 30, }
+}

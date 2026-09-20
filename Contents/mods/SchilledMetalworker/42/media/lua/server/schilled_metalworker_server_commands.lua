@@ -3,7 +3,7 @@ if isClient() then
 end
 
 local Commands = {}
-local SCRAP_TYPE = 'Base.ScrapMetal'
+local SCRAP_TYPE = 'Base.IronPiece'
 local SCRAP_COST = 5
 
 local function removeScrapMetal(player)

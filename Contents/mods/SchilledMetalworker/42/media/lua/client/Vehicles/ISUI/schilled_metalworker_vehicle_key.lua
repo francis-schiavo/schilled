@@ -13,7 +13,7 @@ function ISVehicleMenu.FillMenuOutsideVehicle(player, context, vehicle, test)
     local RecipeKnown = playerObj:isRecipeKnown("CreateCarKey", true)
     if not (string.match(vehicle:getScript():getName(), "Burnt") or string.match(vehicle:getScript():getName(), "Smashed")) and RecipeKnown then
         local createKeyOption = context:addOption(getText("ContextMenu_CreateCarKey"), playerObj, CreateCarKey, vehicle)
-        createKeyOption.toolTip, createKeyOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.ScrapMetal"] = 5 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 })
+        createKeyOption.toolTip, createKeyOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.IronPiece"] = 5 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 })
     end
 
     originalContextMenu(player, context, vehicle, test)

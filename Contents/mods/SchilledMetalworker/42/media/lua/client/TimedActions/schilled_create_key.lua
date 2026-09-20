@@ -2,7 +2,7 @@ require "TimedActions/ISBaseTimedAction"
 
 SchilledCreateKeyAction = ISBaseTimedAction:derive("SchilledCreateKeyAction")
 
-local SCRAP_TYPE = "Base.ScrapMetal"
+local SCRAP_TYPE = "Base.IronPiece"
 local SCRAP_COST = 5
 
 local function hasScrap(character)

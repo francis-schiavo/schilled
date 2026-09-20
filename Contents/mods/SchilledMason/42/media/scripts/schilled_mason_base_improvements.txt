@@ -1,0 +1,28 @@
+module Base {
+  /* Vanilla paint UseDelta=0.1 → 0.01 (10x longer) */
+  item PaintBlack { UseDelta = 0.01, }
+  item PaintBlue { UseDelta = 0.01, }
+  item PaintBrown { UseDelta = 0.01, }
+  item PaintCyan { UseDelta = 0.01, }
+  item PaintGreen { UseDelta = 0.01, }
+  item PaintGrey { UseDelta = 0.01, }
+  item PaintLightBlue { UseDelta = 0.01, }
+  item PaintLightBrown { UseDelta = 0.01, }
+  item PaintOrange { UseDelta = 0.01, }
+  item PaintPink { UseDelta = 0.01, }
+  item PaintPurple { UseDelta = 0.01, }
+  item PaintRed { UseDelta = 0.01, }
+  item PaintTurquoise { UseDelta = 0.01, }
+  item PaintWhite { UseDelta = 0.01, }
+  item PaintYellow { UseDelta = 0.01, }
+
+  /* Vanilla plaster UseDelta=0.1 → 0.01 (10x longer) */
+  item BucketPlasterFull { UseDelta = 0.01, }
+  item BucketCarvedPlasterFull { UseDelta = 0.01, }
+
+  /* Vanilla concrete/cement UseDelta=0.25 → 0.025 (10x longer) */
+  item BucketConcreteFull { UseDelta = 0.025, }
+  item BucketCarvedConcreteFull { UseDelta = 0.025, }
+  item BucketCarvedClayCement { UseDelta = 0.025, }
+  item BucketClayCement { UseDelta = 0.025, }
+}

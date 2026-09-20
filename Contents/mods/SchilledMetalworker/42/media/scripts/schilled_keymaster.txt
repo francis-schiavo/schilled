@@ -10,7 +10,7 @@ module Base {
         xpAward = MetalWelding:25,
         inputs
         {
-            item 5 [Base.ScrapMetal],
+            item 5 [Base.IronPiece],
         }
         outputs
         {
@@ -29,7 +29,7 @@ module Base {
         xpAward = MetalWelding:25,
         inputs
         {
-            item 5 [Base.ScrapMetal],
+            item 5 [Base.IronPiece],
         }
         outputs
         {
@@ -48,7 +48,7 @@ module Base {
         xpAward = MetalWelding:25,
         inputs
         {
-            item 5 [Base.ScrapMetal],
+            item 5 [Base.IronPiece],
         }
         outputs
         {
