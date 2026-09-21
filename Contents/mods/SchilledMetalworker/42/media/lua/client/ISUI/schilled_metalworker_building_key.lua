@@ -23,12 +23,12 @@ ISWorldObjectContextMenu.createMenu = function(player, worldobjects, x, y, test)
         if isDoor then
             if canCreateDoorKey then
                 local createKeyOption = context:addOption(getText("ContextMenu_CreateDoorKey"), playerObj, createDoorKey, obj);
-                createKeyOption.toolTip, createKeyOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.IronPiece"] = 5 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 });
+                createKeyOption.toolTip, createKeyOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.IronBarQuarter"] = 1 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 });
             end
 
             if square and square:getBuilding() and canCreateBuildingKey then
                 local createKeyOption = context:addOption(getText("ContextMenu_CreateBuildingKey"), playerObj, createBuildingKey);
-                createKeyOption.toolTip, createKeyOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.IronPiece"] = 5 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 });
+                createKeyOption.toolTip, createKeyOption.notAvailable = ContextMenuBuilder:CreateMenuTooltip(playerObj, { ["Base.IronBarQuarter"] = 1 }, { ["Mechanics"] = 2, ["MetalWelding"] = 2 });
             end
         end
     end

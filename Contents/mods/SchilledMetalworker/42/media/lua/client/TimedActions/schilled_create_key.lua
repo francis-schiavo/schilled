@@ -2,8 +2,8 @@ require "TimedActions/ISBaseTimedAction"
 
 SchilledCreateKeyAction = ISBaseTimedAction:derive("SchilledCreateKeyAction")
 
-local SCRAP_TYPE = "Base.IronPiece"
-local SCRAP_COST = 5
+local SCRAP_TYPE = "Base.IronBarQuarter"
+local SCRAP_COST = 1
 
 local function hasScrap(character)
     return character:getInventory():getNumberOfItem(SCRAP_TYPE, false, true) >= SCRAP_COST

@@ -93,7 +93,7 @@ end
 
 function SchilledMechanic:GetRecycleMetalSheetYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
-    local yield = { ["Base.IronPiece"] = self:GetYield(percentage, 1, 3) }
+    local yield = { ["Base.IronBarQuarter"] = self:GetYield(percentage, 1, 2) }
 
     local random = ZombRand(2)
     if random == 0 then
@@ -107,7 +107,7 @@ end
 function SchilledMechanic:GetRecycleSmallMetalSheetYield(player)
     local percentage = self:YieldIncreaseBySkillPercentage(player, { Perks.Mechanics, Perks.MetalWelding })
     return {
-        ["Base.IronPiece"] = self:GetYield(percentage, 0, 2),
+        ["Base.IronBarQuarter"] = self:GetYield(percentage, 0, 2),
         ["Base.SmallSheetMetal"] = self:GetYield(percentage, 0, 1)
     }, { [Perks.MetalWelding] = 10, [Perks.Mechanics] = 10 }
 end
@@ -130,7 +130,7 @@ function SchilledMechanic:GetRecycleArmorYield(player)
 end
 
 function SchilledMechanic:GetRecycleEngineYield(condition)
-    return { ["Base.EngineParts"] = self:GetYield(condition, 1, 26) }, { [Perks.MetalWelding] = 10, [Perks.Mechanics] = 10 }
+    return { ["Base.EngineParts"] = self:GetYield(condition, 1, 15) }, { [Perks.MetalWelding] = 10, [Perks.Mechanics] = 10 }
 end
 
 function SchilledMechanic:GetRecycleWoodenYield(player)

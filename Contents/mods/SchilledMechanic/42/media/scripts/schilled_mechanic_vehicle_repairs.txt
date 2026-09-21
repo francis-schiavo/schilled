@@ -55,22 +55,18 @@ module SchilledMechanic {
 
     fixing Fix Window
     {
-        Require = Base.FrontWindow1;Base.RearWindow1;Base.FrontWindow2;Base.RearWindow2;Base.FrontWindow3;Base.RearWindow3;Base.Windshield1;Base.RearWindshield1;Base.Windshield2;Base.RearWindshield2;Base.Windshield3;Base.RearWindshield3,
-
-        GlobalItem = Base.Screws=5,
+        Require = Base.FrontWindow1;Base.RearWindow1;Base.FrontWindow2;Base.RearWindow2;Base.FrontWindow3;Base.RearWindow3;,
         ConditionModifier = 10,
 
-        Fixer = Base.SheetMetal; Mechanics=5,
-        Fixer = Base.SmallSheetMetal=2; Mechanics=5,
+        Fixer = Base.GlassPanel=1; Mechanics=2,
     }
 
-    fixing Fix Window with cloth
+    fixing Fix Windshield
     {
-        Require = Base.FrontWindow1;Base.RearWindow1;Base.FrontWindow2;Base.RearWindow2;Base.FrontWindow3;Base.RearWindow3;Base.Windshield1;Base.RearWindshield1;Base.Windshield2;Base.RearWindshield2;Base.Windshield3;Base.RearWindshield3,
-        ConditionModifier = 1.5,
+        Require = Base.Windshield1;Base.RearWindshield1;Base.Windshield2;Base.RearWindshield2;Base.Windshield3;Base.RearWindshield3,
+        ConditionModifier = 10,
 
-        Fixer = Base.Sheet=2; Mechanics=2,
-        Fixer = Base.RippedSheets=3; Mechanics=2,
+        Fixer = Base.GlassPanel=2; Mechanics=2,
     }
 
     fixing Fix Light

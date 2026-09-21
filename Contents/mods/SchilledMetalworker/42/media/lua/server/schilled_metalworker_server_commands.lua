@@ -3,8 +3,8 @@ if isClient() then
 end
 
 local Commands = {}
-local SCRAP_TYPE = 'Base.IronPiece'
-local SCRAP_COST = 5
+local SCRAP_TYPE = 'Base.IronBarQuarter'
+local SCRAP_COST = 1
 
 local function removeScrapMetal(player)
     local inv = player:getInventory()
