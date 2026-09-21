@@ -145,6 +145,8 @@ how to cut keys.
 - Blowtorches last much longer (`UseDelta = 0.001`). Refilling from a propane
   tank is rewritten to match that use rate.
 
+- **Paint Toolbox** / **Paint Reinforced Toolbox**: one recipe each; vanilla paint picks the color via `itemMapper` (`PaintGrey` → dark gray, `PaintBlue` → blue, `PaintOrange` → orange, `PaintRed` → vanilla red). **Make Reinforced Toolbox** is one recipe that maps each color to its reinforced variant.
+
 ### SchilledMason
 
 - Paint cans (all colours), plaster buckets, and cement/concrete buckets last

@@ -1,6 +1,18 @@
 {
   "SchilledMetalworker.ReinforcedMachete": "Facão Reforçado",
   "SchilledMetalworker.SuperMachete": "Super Facão",
-  "SchilledMetalworker.ReinforcedToolbox": "Caixa de Ferramentas Reforçada",
-  "SchilledMetalworker.KeymasterMag": "Mestre da chaves"
+  "SchilledMetalworker.ReinforcedToolbox": "Caixa de ferramentas reforçada",
+  "SchilledMetalworker.KeymasterMag": "Mestre da chaves",
+  "SchilledMetalworker.ToolboxDarkGray": "Caixa de Ferramentas",
+  "SchilledMetalworker.ToolboxBlue": "Caixa de Ferramentas",
+  "SchilledMetalworker.ToolboxOrange": "Caixa de Ferramentas",
+  "SchilledMetalworker.ReinforcedToolboxDarkGray": "Caixa de ferramentas reforçada",
+  "SchilledMetalworker.ReinforcedToolboxBlue": "Caixa de ferramentas reforçada",
+  "SchilledMetalworker.ReinforcedToolboxOrange": "Caixa de ferramentas reforçada",
+  "SchilledMetalworker.ToolboxGreen": "Caixa de Ferramentas",
+  "SchilledMetalworker.ReinforcedToolboxGreen": "Caixa de ferramentas reforçada",
+  "SchilledMetalworker.ToolboxPink": "Caixa de Ferramentas",
+  "SchilledMetalworker.ReinforcedToolboxPink": "Caixa de ferramentas reforçada",
+  "SchilledMetalworker.ToolboxPurple": "Caixa de Ferramentas",
+  "SchilledMetalworker.ReinforcedToolboxPurple": "Caixa de ferramentas reforçada"
 }

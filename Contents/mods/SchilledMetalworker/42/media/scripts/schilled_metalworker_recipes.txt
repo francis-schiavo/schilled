@@ -43,25 +43,87 @@ module SchilledMetalworker {
         }
     }
 
+    craftRecipe PaintToolbox {
+        timedAction = Making,
+        time = 60,
+        tags = InHandCraft;CanBeDoneFromFloor,
+        Category = Metalworking,
+        inputs {
+            item 1 [Base.Toolbox;Base.Toolbox_Mechanic;Base.Bag_JanitorToolbox;Base.Toolbox_Gardening;Base.Toolbox_Fishing;Base.Toolbox_Farming;SchilledMetalworker.ToolboxDarkGray;SchilledMetalworker.ToolboxBlue;SchilledMetalworker.ToolboxOrange;SchilledMetalworker.ToolboxGreen;SchilledMetalworker.ToolboxPink;SchilledMetalworker.ToolboxPurple] mode:destroy,
+            item 1 [Base.PaintGrey;Base.PaintBlue;Base.PaintOrange;Base.PaintRed;Base.PaintGreen;Base.PaintPink;Base.PaintPurple] mappers[toolboxPaint],
+        }
+        outputs {
+            item 1 mapper:toolboxPaint,
+        }
+        itemMapper toolboxPaint {
+            Base.Toolbox = Base.PaintRed,
+            SchilledMetalworker.ToolboxDarkGray = Base.PaintGrey,
+            SchilledMetalworker.ToolboxBlue = Base.PaintBlue,
+            SchilledMetalworker.ToolboxOrange = Base.PaintOrange,
+            SchilledMetalworker.ToolboxGreen = Base.PaintGreen,
+            SchilledMetalworker.ToolboxPink = Base.PaintPink,
+            SchilledMetalworker.ToolboxPurple = Base.PaintPurple,
+            default = SchilledMetalworker.ToolboxDarkGray,
+        }
+    }
+
+    craftRecipe PaintReinforcedToolbox {
+        timedAction = Making,
+        time = 60,
+        tags = InHandCraft;CanBeDoneFromFloor,
+        Category = Metalworking,
+        inputs {
+            item 1 [SchilledMetalworker.ReinforcedToolbox;SchilledMetalworker.ReinforcedToolboxDarkGray;SchilledMetalworker.ReinforcedToolboxBlue;SchilledMetalworker.ReinforcedToolboxOrange;SchilledMetalworker.ReinforcedToolboxGreen;SchilledMetalworker.ReinforcedToolboxPink;SchilledMetalworker.ReinforcedToolboxPurple] mode:destroy,
+            item 1 [Base.PaintGrey;Base.PaintBlue;Base.PaintOrange;Base.PaintRed;Base.PaintGreen;Base.PaintPink;Base.PaintPurple] mappers[reinforcedToolboxPaint],
+        }
+        outputs {
+            item 1 mapper:reinforcedToolboxPaint,
+        }
+        itemMapper reinforcedToolboxPaint {
+            SchilledMetalworker.ReinforcedToolbox = Base.PaintRed,
+            SchilledMetalworker.ReinforcedToolboxDarkGray = Base.PaintGrey,
+            SchilledMetalworker.ReinforcedToolboxBlue = Base.PaintBlue,
+            SchilledMetalworker.ReinforcedToolboxOrange = Base.PaintOrange,
+            SchilledMetalworker.ReinforcedToolboxGreen = Base.PaintGreen,
+            SchilledMetalworker.ReinforcedToolboxPink = Base.PaintPink,
+            SchilledMetalworker.ReinforcedToolboxPurple = Base.PaintPurple,
+            default = SchilledMetalworker.ReinforcedToolboxDarkGray,
+        }
+    }
+
     craftRecipe MakeReinforcedToolbox {
         timedAction = Welding,
         time = 150,
         tags = InHandCraft;CanBeDoneFromFloor,
         Category = Metalworking,
-        SkillRequired = MetalWelding:8,
+        SkillRequired = MetalWelding:5,
         xpAward = MetalWelding:45,
-
         inputs {
             item 2 [Base.BlowTorch] flags[Prop1],
-            item 2 tags[WeldingMask] mode:keep,
+            item 1 tags[WeldingMask] mode:keep,
             item 2 [Base.WeldingRods],
-            item 2 [Base.Hinge],
-            item 2 [Base.SheetMetal],
-            item 2 [Base.MetalBar],
-            item 1 [Base.Toolbox],
+            item 1 [Base.Hinge],
+            item 2 [Base.SmallSheetMetal],
+            item 1 [Base.MetalBar],
+            item 1 [Base.Toolbox;Base.Toolbox_Mechanic;Base.Bag_JanitorToolbox;Base.Toolbox_Gardening;Base.Toolbox_Fishing;Base.Toolbox_Farming;SchilledMetalworker.ToolboxDarkGray;SchilledMetalworker.ToolboxBlue;SchilledMetalworker.ToolboxOrange;SchilledMetalworker.ToolboxGreen;SchilledMetalworker.ToolboxPink;SchilledMetalworker.ToolboxPurple] mode:destroy mappers[reinforcedToolbox],
         }
         outputs {
-            item 1 SchilledMetalworker.ReinforcedToolbox,
+            item 1 mapper:reinforcedToolbox,
+        }
+        itemMapper reinforcedToolbox {
+            SchilledMetalworker.ReinforcedToolbox = Base.Toolbox,
+            SchilledMetalworker.ReinforcedToolbox = Base.Toolbox_Mechanic,
+            SchilledMetalworker.ReinforcedToolbox = Base.Bag_JanitorToolbox,
+            SchilledMetalworker.ReinforcedToolbox = Base.Toolbox_Gardening,
+            SchilledMetalworker.ReinforcedToolbox = Base.Toolbox_Fishing,
+            SchilledMetalworker.ReinforcedToolbox = Base.Toolbox_Farming,
+            SchilledMetalworker.ReinforcedToolboxDarkGray = SchilledMetalworker.ToolboxDarkGray,
+            SchilledMetalworker.ReinforcedToolboxBlue = SchilledMetalworker.ToolboxBlue,
+            SchilledMetalworker.ReinforcedToolboxOrange = SchilledMetalworker.ToolboxOrange,
+            SchilledMetalworker.ReinforcedToolboxGreen = SchilledMetalworker.ToolboxGreen,
+            SchilledMetalworker.ReinforcedToolboxPink = SchilledMetalworker.ToolboxPink,
+            SchilledMetalworker.ReinforcedToolboxPurple = SchilledMetalworker.ToolboxPurple,
+            default = SchilledMetalworker.ReinforcedToolbox,
         }
     }
 }

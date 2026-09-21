@@ -1,6 +1,18 @@
 {
   "SchilledMetalworker.ReinforcedMachete": "Reinforced Machete",
   "SchilledMetalworker.SuperMachete": "Super Machete",
-  "SchilledMetalworker.ReinforcedToolbox": "Reinforced Toolbox",
-  "SchilledMetalworker.KeymasterMag": "Keymaster Magazine"
+  "SchilledMetalworker.ReinforcedToolbox": "Reinforced toolbox",
+  "SchilledMetalworker.KeymasterMag": "Keymaster Magazine",
+  "SchilledMetalworker.ToolboxDarkGray": "Toolbox",
+  "SchilledMetalworker.ToolboxBlue": "Toolbox",
+  "SchilledMetalworker.ToolboxOrange": "Toolbox",
+  "SchilledMetalworker.ReinforcedToolboxDarkGray": "Reinforced toolbox",
+  "SchilledMetalworker.ReinforcedToolboxBlue": "Reinforced toolbox",
+  "SchilledMetalworker.ReinforcedToolboxOrange": "Reinforced toolbox",
+  "SchilledMetalworker.ToolboxGreen": "Toolbox",
+  "SchilledMetalworker.ReinforcedToolboxGreen": "Reinforced toolbox",
+  "SchilledMetalworker.ToolboxPink": "Toolbox",
+  "SchilledMetalworker.ReinforcedToolboxPink": "Reinforced toolbox",
+  "SchilledMetalworker.ToolboxPurple": "Toolbox",
+  "SchilledMetalworker.ReinforcedToolboxPurple": "Reinforced toolbox"
 }

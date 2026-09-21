@@ -119,6 +119,293 @@ module SchilledMetalworker {
         MaxItemSize = 2.0,
     }
 
+
+    /* Colored toolbox world models (recolored vanilla ToolBox texture) */
+    model ToolBox_DarkGray_Ground
+    {
+        mesh = WorldItems/Clothing/ToolBox_Ground,
+        texture = Clothes/Bag/ToolBox_DarkGray,
+        scale = 0.4,
+    }
+
+    model ToolBox_Blue_Ground
+    {
+        mesh = WorldItems/Clothing/ToolBox_Ground,
+        texture = Clothes/Bag/ToolBox_Blue,
+        scale = 0.4,
+    }
+
+    model ToolBox_Orange_Ground
+    {
+        mesh = WorldItems/Clothing/ToolBox_Ground,
+        texture = Clothes/Bag/ToolBox_Orange,
+        scale = 0.4,
+    }
+
+    model ToolBox_Green_Ground
+    {
+        mesh = WorldItems/Clothing/ToolBox_Ground,
+        texture = Clothes/Bag/ToolBox_Green,
+        scale = 0.4,
+    }
+
+    model ToolBox_Pink_Ground
+    {
+        mesh = WorldItems/Clothing/ToolBox_Ground,
+        texture = Clothes/Bag/ToolBox_Pink,
+        scale = 0.4,
+    }
+
+    model ToolBox_Purple_Ground
+    {
+        mesh = WorldItems/Clothing/ToolBox_Ground,
+        texture = Clothes/Bag/ToolBox_Purple,
+        scale = 0.4,
+    }
+
+
+    item ToolboxDarkGray
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxDarkGray,
+        CanHaveHoles = false,
+        Capacity = 8,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxDarkGray_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxDarkGray_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 50,
+        WorldStaticModel = ToolBox_DarkGray_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ToolboxBlue
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxBlue,
+        CanHaveHoles = false,
+        Capacity = 8,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxBlue_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxBlue_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 50,
+        WorldStaticModel = ToolBox_Blue_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ToolboxOrange
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxOrange,
+        CanHaveHoles = false,
+        Capacity = 8,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxOrange_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxOrange_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 50,
+        WorldStaticModel = ToolBox_Orange_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ToolboxGreen
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxGreen,
+        CanHaveHoles = false,
+        Capacity = 8,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxGreen_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxGreen_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 50,
+        WorldStaticModel = ToolBox_Green_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ToolboxPink
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxPink,
+        CanHaveHoles = false,
+        Capacity = 8,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxPink_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxPink_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 50,
+        WorldStaticModel = ToolBox_Pink_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ToolboxPurple
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxPurple,
+        CanHaveHoles = false,
+        Capacity = 8,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxPurple_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxPurple_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 50,
+        WorldStaticModel = ToolBox_Purple_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+
+    item ReinforcedToolboxDarkGray
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxDarkGray,
+        CanHaveHoles = false,
+        Capacity = 20,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxDarkGray_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxDarkGray_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 80,
+        WorldStaticModel = ToolBox_DarkGray_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ReinforcedToolboxBlue
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxBlue,
+        CanHaveHoles = false,
+        Capacity = 20,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxBlue_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxBlue_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 80,
+        WorldStaticModel = ToolBox_Blue_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ReinforcedToolboxOrange
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxOrange,
+        CanHaveHoles = false,
+        Capacity = 20,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxOrange_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxOrange_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 80,
+        WorldStaticModel = ToolBox_Orange_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ReinforcedToolboxGreen
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxGreen,
+        CanHaveHoles = false,
+        Capacity = 20,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxGreen_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxGreen_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 80,
+        WorldStaticModel = ToolBox_Green_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ReinforcedToolboxPink
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxPink,
+        CanHaveHoles = false,
+        Capacity = 20,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxPink_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxPink_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 80,
+        WorldStaticModel = ToolBox_Pink_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+    item ReinforcedToolboxPurple
+    {
+        DisplayCategory = Container,
+        ItemType = base:container,
+        Weight = 2.0,
+        Icon = ToolboxPurple,
+        CanHaveHoles = false,
+        Capacity = 20,
+        CloseSound = CloseMetalToolbox,
+        OpenSound = OpenMetalToolbox,
+        PutInSound = StoreItemMetalToolbox,
+        ReplaceInPrimaryHand = Bag_ToolboxPurple_RHand holdingbagright,
+        ReplaceInSecondHand = Bag_ToolboxPurple_LHand holdingbagleft,
+        RunSpeedModifier = 0.97,
+        WeightReduction = 80,
+        WorldStaticModel = ToolBox_Purple_Ground,
+        Tags = base:hasmetal,
+        MaxItemSize = 2.0,
+    }
+
+
     model KeymasterMagGround
     {
         mesh = WorldItems/Magazine,

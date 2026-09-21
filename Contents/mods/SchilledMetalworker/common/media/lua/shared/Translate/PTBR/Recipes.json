@@ -1,8 +1,10 @@
 {
-    "ReinforceMachete": "Reforçar Machete",
-    "MakeSuperMachete": "Fazer Super Machete",
-    "MakeReinforcedToolbox": "Fazer Caixa de Ferramentas Reforçada",
-    "CreateCarKey": "Criar Chave do Carro",
-    "CreateBuildingKey": "Criar Chave do Prédio",
-    "CreateDoorKey": "Criar Chave da Porta"
+  "ReinforceMachete": "Reforçar Machete",
+  "MakeSuperMachete": "Fazer Super Machete",
+  "MakeReinforcedToolbox": "Fazer Caixa de Ferramentas Reforçada",
+  "CreateCarKey": "Criar Chave do Carro",
+  "CreateBuildingKey": "Criar Chave do Prédio",
+  "CreateDoorKey": "Criar Chave da Porta",
+  "PaintToolbox": "Pintar Caixa de Ferramentas",
+  "PaintReinforcedToolbox": "Pintar Caixa de Ferramentas Reforçada"
 }

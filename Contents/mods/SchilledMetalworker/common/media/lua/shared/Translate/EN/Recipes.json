@@ -1,8 +1,10 @@
 {
-    "ReinforceMachete": "Reinforce Machete",
-    "MakeSuperMachete": "Make Super Machete",
-    "MakeReinforcedToolbox": "Make Reinforced Toolbox",
-    "CreateCarKey": "Create Car Key",
-    "CreateBuildingKey": "Create Building Key",
-    "CreateDoorKey": "Create Door Key"
+  "ReinforceMachete": "Reinforce Machete",
+  "MakeSuperMachete": "Make Super Machete",
+  "MakeReinforcedToolbox": "Make Reinforced Toolbox",
+  "CreateCarKey": "Create Car Key",
+  "CreateBuildingKey": "Create Building Key",
+  "CreateDoorKey": "Create Door Key",
+  "PaintToolbox": "Paint Toolbox",
+  "PaintReinforcedToolbox": "Paint Reinforced Toolbox"
 }
