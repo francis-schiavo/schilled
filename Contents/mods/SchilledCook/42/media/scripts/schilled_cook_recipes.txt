@@ -58,4 +58,44 @@ module SchilledCook {
             item 10 Base.BreadSlices,
         }
     }
+
+    craftRecipe ShredHemp
+    {
+        timedAction = Making,
+        time = 300,
+        Tags = AnySurfaceCraft;Farming,
+        category = Farming,
+        inputs
+        {
+            item 1 [Base.HempBundleDried] mode:destroy flags[Prop2],
+            item 1 tags[base:scissors;base:sharpknife] mode:keep flags[MayDegradeLight;Prop1;IsNotDull],
+        }
+        outputs
+        {
+            item 1 SchilledCook.HempLoose,
+        }
+    }
+
+    craftRecipe FillPipeWithHemp
+    {
+        timedAction = Making,
+        time = 60,
+        Tags = InHandCraft;CanBeDoneInDark,
+        category = Miscellaneous,
+        inputs
+        {
+            item 3 tags[schilled_cook:hemp],
+            item 1 [Base.SmokingPipe;Base.CanPipe] mode:destroy mappers[PipeMapper],
+        }
+        outputs
+        {
+            item 1 mapper:PipeMapper,
+        }
+        itemMapper PipeMapper
+        {
+            SchilledCook.CanPipe_Hemp = Base.CanPipe,
+            SchilledCook.SmokingPipe_Hemp = Base.SmokingPipe,
+            default = SchilledCook.SmokingPipe_Hemp,
+        }
+    }
 }

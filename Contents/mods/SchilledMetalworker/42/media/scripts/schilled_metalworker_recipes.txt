@@ -12,7 +12,7 @@ module SchilledMetalworker {
         xpAward = MetalWelding:25,
 
         inputs {
-            item 1 [Base.Machete],
+            item 1 [Base.Machete;Base.MacheteForged],
             item 2 [Base.BlowTorch] flags[Prop1],
             item 1 tags[WeldingMask] mode:keep,
             item 1 [Base.WeldingRods],
@@ -32,7 +32,7 @@ module SchilledMetalworker {
         xpAward = MetalWelding:45,
 
         inputs {
-            item 3 [Base.Machete],
+            item 3 [Base.Machete;Base.MacheteForged],
             item 2 [Base.BlowTorch] flags[Prop1],
             item 1 tags[WeldingMask] mode:keep,
             item 2 [Base.WeldingRods],

@@ -1,36 +1,19 @@
 module Base {
   craftRecipe RipClothing
   {
-    AllowBatchCraft = True,
-    xpAward = Tailoring:2,
-    Time = 10,
-  }
-
-  craftRecipe RipWornClothing
-  {
-    AllowBatchCraft = True,
-    xpAward = Tailoring:2,
+    xpAward = Tailoring:5,
     Time = 10,
   }
 
   craftRecipe RipDenimClothing
   {
-    AllowBatchCraft = True,
-    xpAward = Tailoring:2,
+    xpAward = Tailoring:5,
     Time = 20,
-  }
-
-  craftRecipe RipWornDenimClothing
-  {
-    AllowBatchCraft = True,
-    xpAward = Tailoring:2,
-    Time = 30,
   }
 
   craftRecipe RipSheets
   {
-    AllowBatchCraft = True,
-    xpAward = Tailoring:2,
+    xpAward = Tailoring:5,
     Time = 10,
   }
 }

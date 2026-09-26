@@ -1,80 +1,109 @@
 module SchilledTailor {
-  import {
-    Base
-  }
+    import {
+        Base
+    }
 
-  craftRecipe ReinforceBackPack
-  {
-    timedAction = SewingCloth,
-    Time = 200,
-    tags = AnySurfaceCraft,
-    SkillRequired = Tailoring:8,
-    xpAward = Tailoring:25,
-    needTobeLearn = false,
-    category = Tailoring,
-    inputs
+    craftRecipe ReinforceSewingKit
     {
-      item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
-      item 1 [Base.Bag_ALICEpack;Base.Bag_ALICEpack_DesertCamo;Base.Bag_ALICEpack_Army] mode:destroy flags[IsEmpty] mappers[backpackType],
-      item 5 [Base.DenimStrips],
-      item 5 [Base.LeatherStrips],
-      item 10 [Base.Thread],
+        timedAction = SewingCloth,
+        Time = 100,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:3,
+        xpAward = Tailoring:25,
+        needTobeLearn = false,
+        category = Tailoring,
+        inputs
+        {
+            item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
+            item 1 [Base.SewingKit] mode:destroy flags[IsEmpty],
+            item 2 [Base.DenimStrips],
+            item 2 [Base.LeatherStrips],
+            item 5 [Base.Thread],
+        }
+        outputs
+        {
+            item 1 SchilledTailor.ReinforcedSewingKit,
+        }
     }
-    outputs
-    {
-      item 1 mapper:backpackType,
-    }
-    itemMapper backpackType
-    {
-      SchilledTailor.ReinforcedALICEpack = Base.Bag_ALICEpack,
-      SchilledTailor.ReinforcedALICEpack_DesertCamo = Base.Bag_ALICEpack_DesertCamo,
-      SchilledTailor.ReinforcedALICEpack_Army = Base.Bag_ALICEpack_Army,
-    }
-  }
 
-  craftRecipe ReinforceSewingKit
-  {
-    timedAction = SewingCloth,
-    Time = 100,
-    tags = AnySurfaceCraft,
-    SkillRequired = Tailoring:8,
-    xpAward = Tailoring:25,
-    needTobeLearn = false,
-    category = Tailoring,
-    inputs
+    craftRecipe ReinforceFirstAidKit
     {
-      item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
-      item 1 [Base.SewingKit] mode:destroy flags[IsEmpty],
-      item 2 [Base.DenimStrips],
-      item 2 [Base.LeatherStrips],
-      item 5 [Base.Thread],
+        timedAction = SewingCloth,
+        Time = 100,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:5,
+        xpAward = Tailoring:25,
+        needTobeLearn = false,
+        category = Tailoring,
+        inputs
+        {
+            item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
+            item 1 [Base.FirstAidKit] mode:destroy flags[IsEmpty],
+            item 2 [Base.DenimStrips],
+            item 2 [Base.LeatherStrips],
+            item 5 [Base.Thread],
+        }
+        outputs
+        {
+            item 1 SchilledTailor.ReinforcedFirstAidKit,
+        }
     }
-    outputs
-    {
-      item 1 SchilledTailor.ReinforcedSewingKit,
-    }
-  }
 
-  craftRecipe ReinforceFirstAidKit
-  {
-    timedAction = SewingCloth,
-    Time = 100,
-    tags = AnySurfaceCraft,
-    SkillRequired = Tailoring:8,
-    xpAward = Tailoring:25,
-    needTobeLearn = false,
-    category = Tailoring,
-    inputs
+    craftRecipe ReinforceSuspenders
     {
-      item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
-      item 1 [Base.FirstAidKit] mode:destroy flags[IsEmpty],
-      item 2 [Base.DenimStrips],
-      item 2 [Base.LeatherStrips],
-      item 5 [Base.Thread],
+        timedAction = SewingCloth,
+        Time = 200,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:8,
+        xpAward = Tailoring:25,
+        needTobeLearn = false,
+        category = Tailoring,
+        inputs
+        {
+            item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
+            item 1 [Base.Bag_ALICE_BeltSus;Base.Bag_ALICE_BeltSus_Camo;Base.Bag_ALICE_BeltSus_Green] mode:destroy flags[IsEmpty] mappers[suspendersType],
+            item 5 [Base.DenimStrips],
+            item 5 [Base.LeatherStrips],
+            item 10 [Base.Thread],
+        }
+        outputs
+        {
+            item 1 mapper:suspendersType,
+        }
+        itemMapper suspendersType
+        {
+            SchilledTailor.ReinforcedBag_ALICE_BeltSus = Base.Bag_ALICE_BeltSus,
+            SchilledTailor.ReinforcedBag_ALICE_BeltSus_Camo = Base.Bag_ALICE_BeltSus_Camo,
+            SchilledTailor.ReinforcedBag_ALICE_BeltSus_Green = Base.Bag_ALICE_BeltSus_Green,
+        }
     }
-    outputs
+
+    craftRecipe ReinforceBackPack
     {
-      item 1 SchilledTailor.ReinforcedFirstAidKit,
+        timedAction = SewingCloth,
+        Time = 200,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:10,
+        xpAward = Tailoring:25,
+        needTobeLearn = false,
+        category = Tailoring,
+        inputs
+        {
+            item 1 tags[SharpKnife;Scissors] mode:keep flags[IsNotDull;Prop1],
+            item 1 [Base.Bag_ALICEpack;Base.Bag_ALICEpack_DesertCamo;Base.Bag_ALICEpack_Army] mode:destroy flags[IsEmpty] mappers[backpackType],
+            item 5 [Base.DenimStrips],
+            item 5 [Base.LeatherStrips],
+            item 10 [Base.Thread],
+        }
+        outputs
+        {
+            item 1 mapper:backpackType,
+        }
+        itemMapper backpackType
+        {
+            SchilledTailor.ReinforcedALICEpack = Base.Bag_ALICEpack,
+            SchilledTailor.ReinforcedALICEpack_DesertCamo = Base.Bag_ALICEpack_DesertCamo,
+            SchilledTailor.ReinforcedALICEpack_Army = Base.Bag_ALICEpack_Army,
+        }
     }
-  }
 }

@@ -174,7 +174,12 @@ how to cut keys.
 
 ### SchilledBlacksmith
 
-WIP scaffold — blacksmith features coming soon.
+Speeds up blacksmith workstation crafting:
+
+- **Furnace** recipes (charcoal, ore extraction, smelting, casting bars/ingots)
+  run at `time = 30`. Charcoal batches also yield 8 crafted charcoal.
+- **Forge** recipes (PrimitiveForge / Forge / AdvancedForge — tools, blades,
+  heads, armor, bars, cookware, etc.) likewise run at `time = 30`.
 
 ### SchilledEletrician
 
