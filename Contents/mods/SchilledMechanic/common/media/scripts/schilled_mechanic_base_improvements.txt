@@ -48,11 +48,6 @@ module Base
 
     fixing Fix Car seat
     {
-        GlobalItem = Base.Thread=4,
         ConditionModifier = 10,
-        Fixer = RippedSheets=20; Tailoring=8; Mechanics=8,
-        Fixer = DenimStrips=10; Tailoring=4; Mechanics=4,
-        Fixer = LeatherStrips=6; Tailoring=4; Mechanics=4,
-        Fixer = Sheet=2; Tailoring=3; Mechanics=3,
     }
 }

@@ -14,6 +14,7 @@ local enabledParts = {
     "GasTank",
     "Tire",
     "Trunk",
+    "Trailer",
     "TruckBed",
     "TrunkDoor",
     "Headlight",

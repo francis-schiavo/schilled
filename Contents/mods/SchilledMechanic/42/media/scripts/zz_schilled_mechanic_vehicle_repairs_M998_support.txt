@@ -1,6 +1,7 @@
 module SchilledMechanic {
     import {
         Base
+        runFlat
     }
 
     fixing M998 Roofrack
@@ -78,8 +79,7 @@ module SchilledMechanic {
     {
         Require = Base.92amgeneralM998Windshield2;Base.92amgeneralM998SideWindow2,
         ConditionModifier = 10,
-        Fixer = Base.Sheet=2; Mechanics=2,
-        Fixer = Base.RippedSheets=3; Mechanics=2,
+        Fixer = Base.GlassPanel=1; Mechanics=2,
     }
 
     fixing M998 Fix Mudflap
@@ -91,8 +91,16 @@ module SchilledMechanic {
 
     fixing RunFlat Tires
     {
-        Require = runFlat.smallTire,
+        Require = runFlat.SmallTire,
         ConditionModifier = 10,
         Fixer = Base.Glue=5; Mechanics=8,
+    }
+
+    fixing USMIL Seat
+    {
+        Require = USMIL.Seat0,
+        ConditionModifier = 10,
+        Fixer = Base.DuctTape=2; Mechanics=1,
+        Fixer = Base.Glue=2; Mechanics=1,
     }
 }

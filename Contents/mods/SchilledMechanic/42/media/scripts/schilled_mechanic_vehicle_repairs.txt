@@ -44,6 +44,17 @@ module SchilledMechanic {
         Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=3,
     }
 
+    fixing Fix Trailer Trunk Welding
+    {
+        Require = Base.Base.TrailerTrunk,
+
+        GlobalItem = Base.BlowTorch=2,
+        ConditionModifier = 10,
+
+        Fixer = Base.SheetMetal; MetalWelding=3; Mechanics=3,
+        Fixer = Base.SmallSheetMetal=2; MetalWelding=3; Mechanics=3,
+    }
+
     fixing Fix Car Tires
     {
         Require = Base.OldTire1;Base.OldTire2;Base.OldTire3;Base.NormalTire1;Base.NormalTire2;Base.NormalTire3;Base.ModernTire1;Base.ModernTire2;Base.ModernTire3,
